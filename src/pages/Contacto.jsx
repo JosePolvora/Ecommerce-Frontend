@@ -45,14 +45,49 @@ function Mensaje() {
     <div className='h-full'>
 
       <h3 className='text-2xl bg-blue-500 p-2 rounded-t-lg mb-20'>Contactanos</h3>
-      
+
       <section className="contenedorForm">
 
         <div className="horario">
           <ul className="">
-            <li><p><i className='bx bxs-map py-2'></i> Rafael Nuñez 4250, Centro - Córdoba</p></li>
-            <li><p> <i className='bx bxs-phone py-2'></i> +54 9 351 333-4444</p></li>
-            <li><p><i className='bx bxs-envelope py-'></i> winestore@gmail.com</p></li>
+
+            <li>
+              <p>
+                <i className='bx bxs-map'></i>
+                <a
+                  href="https://www.google.com/maps?q=Isla+Verde+2152,+Centro+-+Córdoba"
+                  className="text-blue-500 hover:underline pl-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Isla Verde 2152, Córdoba
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <i className='bx bxs-phone'></i>
+                <a
+                  href="https://wa.me/5493513374719"
+                  className="text-blue-500 hover:underline pl-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +54 9 351 337 4719
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <i className='bx bxs-envelope'></i>
+                <a
+                  href="mailto:winestore@gmail.com"
+                  className="text-blue-500 hover:underline pl-2"
+                >
+                  winestore@gmail.com
+                </a>
+              </p>
+            </li>
             <li><p><i className='bx bx-time py-2'></i> Horarios de Atención<br></br>
               lunes a viernes  de 9 a 18hs.<br></br>
               Sábados de 9 a 13hs.</p></li>

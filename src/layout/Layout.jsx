@@ -1,33 +1,33 @@
-
 import { Outlet, Link } from 'react-router-dom';
+import Footer from '../pages/Footer';
 
 const Layout = () => {
     return (
         <div>
 
             <ul>
-                {/* <li>
-                        <Link className='text-xl' to="/">Inicio</Link>
-                    </li> */}
-                <header className="bg-blue-600">
+                <header className="bg-gradient-to-r from-slate-700 to-purple-500 shadow-lg p-4">
 
-                    <div className="logo">
-                        <p>JosemaDesing</p>
-                    </div>
+                    <div className="flex justify-between items-center">
+                        <div className="logo">
+                            <p>JosemaDesing</p>
+                        </div>
 
-                    <div className="iconos">
-                        <a href="http://localhost:5173/inicioSesion">
-                            <img src="" id="imgCuenta" />
-                        </a>
+                        <div className="flex mr-4">
+                            <a href="http://localhost:5173/inicioSesion">
+                                <img src="" id="imgCuenta" />
+                            </a>
 
-                        <a href="http://localhost:5173/carrito">
-                            <img src="" id="imgCarrito" />
-                        </a>
+                            <a href="http://localhost:5173/carrito">
+                                <img src="" id="imgCarrito" />
+                            </a>
+                        </div>
                     </div>
 
                     <nav className="nav">
                         <ul className='flex justify-center gap-5'>
                             <li><Link className='text-xl' to="/header">Inicio</Link></li>
+                            <li><Link className="text-xl" to="/productos">Productos</Link></li>
                             <li>
                                 <Link className='text-xl' to="#">Bebidas</Link>
                                 <ul>
@@ -44,20 +44,14 @@ const Layout = () => {
                                     <li className="mx-2"><Link to="/productos/categoria/6">Aceites de oliva</Link></li>
                                 </ul>
                             </li>
-                            <li><Link className="text-xl" to="/productos">Productos</Link></li>
+                            
                             <li><Link className="text-xl" to="/contacto">Contacto</Link></li>
-                            <li><Link className="text-xl" to="/footer">Seguinos</Link></li>
+                            <li><Link className="text-xl" to="/footer"></Link></li>
                         </ul>
-                    
                     </nav>
-
                 </header>
-
                 <li>
                     <Link to="/header"></Link>
-                </li>
-                <li>
-                    <Link to="/footer"></Link>
                 </li>
                 <li>
                     <Link to="/inicioSesion"></Link>
@@ -68,14 +62,15 @@ const Layout = () => {
                 <li>
                     <Link to="/productos"></Link>
                 </li>
-
+                <li>
+                    <Link to="/detallexproducto/:id"></Link>
+                </li>
                 <li>
                     <Link to="/recuperar-password"></Link>
                 </li>
                 <li>
                     <Link to="/recuperar-password/reset:token"></Link>
                 </li>
-
                 <li>
                     <Link to="/contacto"></Link>
                 </li>
@@ -94,15 +89,17 @@ const Layout = () => {
                 <li>
                     <Link to="/carrito"></Link>
                 </li>
-
                 <li>
                     <Link to="/productoxcategorias"></Link>
                 </li>
-
             </ul>
             <hr />
-            <Outlet />
-        </div>
+            <main className="flex-grow">
+                <Outlet />
+            </main>
+
+            <Footer />
+        </div >
     )
 }
 

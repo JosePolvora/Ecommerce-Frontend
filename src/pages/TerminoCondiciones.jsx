@@ -3,12 +3,9 @@ function TerminoCondiciones() {
   return (
 
     <div className="terminosContenedor">
-      <div className="flex text-base m-10">
+     
 
-        <a href="http://localhost:5173">Inicio</a>
-      </div>
-
-      <h1 className="ml-16 mt-10 font-bold">TÉRMINOS Y CONDICIONES</h1>
+      <h2 className="ml-16 mt-10 font-bold">TÉRMINOS Y CONDICIONES</h2>
 
       <div className="mr-20">
         <p className="ml-16 mt-10 text-xs">

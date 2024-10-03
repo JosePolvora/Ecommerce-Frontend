@@ -45,7 +45,8 @@ function InicioSesion() {
 
 return (
   <div className='h-screen'>
-    <h3 className='text-2xl bg-blue-500 p-2 rounded-t-lg mb-20'>Ingresar</h3>
+    <h3 className='text-2xl text-white bg-blue-500 p-2 rounded-t-lg mb-20'>Ingresar</h3>
+    {/* <h3 className='text-2xl text-white bg-gradient-to-r from-slate-700 to-red-300 shadow-lg p-2 rounded-t-lg mb-20'>Ingresar</h3> */}
 
     <section className="contenedorForm">
       <div className="formulario">

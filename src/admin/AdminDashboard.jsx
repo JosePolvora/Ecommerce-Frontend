@@ -23,7 +23,7 @@ function AdminDashboard() {
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminproductos">Editar Productos</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1" ><a href="http://localhost:5173/admin/adminusuarios">Editar Usuarios</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="#">Ver Mensajes</a></li>
-                    <li className="hover:text-gray-400 ml-2 pt-1"><a href="#">Editar...</a></li>
+                    <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminimagenes">Editar Imagenes</a></li>
 
                   </ul>
                 </li>

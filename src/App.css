@@ -16,10 +16,6 @@
   display: grid;
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to top, rgba(251, 194, 235, 0.386) 0%, hsla(218, 68%, 79%, 0.114) 100%), url(./images/fondo.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .logo {
@@ -34,8 +30,6 @@
 .iconos {
   display: flex;
   justify-content: flex-end;
-  margin-right: 5%;
-  margin-left: 88%;
 }
 
 #imgCarrito {
@@ -56,10 +50,8 @@
   background-image: url("./images/cuenta.svg");
 }
 
-.header-content {
-  position: relative;
-  text-align: center;
-  margin-top: 300px;
+h1 {
+  font-family: "Revalia", sans-serif;
 }
 
 .header-content h1 {
@@ -72,13 +64,8 @@
 }
 
 .nav {
-  /* background-color: #000; */
-  /* padding-top: 20px; */
   padding-bottom: 100px;
-  /* display: grid; */
   position: relative;
-  /* height: 50vh; */
-  /* width: 100%; */
 }
 
 .nav li ul {
@@ -132,6 +119,10 @@ h3 {
   background-size: cover;
 }
 
+.social-media {
+  display: flex;
+}
+
 .social-media-icon {
   display: inline-block;
   margin-left: 15px;
@@ -143,9 +134,29 @@ h3 {
   color: #fff;
 }
 
+.social-media-icon-fi {
+  display: inline-block;
+  margin-left: 15px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  color: #adaaaaf5;
+  font-size: 30px;
+  line-height: 60px;
+  background-color: black;
+}
+
 .social-media-icon:hover {
   background: rgba(0, 149, 214, 0.9);
   color: #fff;
+}
+
+.social-media-icon-fi:hover {
+  background: black;
+  color: rgba(0, 149, 214, 0.9);
+  border: 3px solid rgba(0, 149, 214, 0.9);
 }
 
 .social-media-icon i {
@@ -187,12 +198,6 @@ h3 {
   font-size: 16px;
   color: #fff;
   margin-bottom: 10px;
-}
-
-.derechos {
-  background: #000;
-  color: #fff;
-  text-align: center;
 }
 
 .logoDerechos {
@@ -252,7 +257,6 @@ h3 {
 }
 
 .horario {
-  /* margin-left: 10%; */
   margin: auto;
 }
 
@@ -302,8 +306,6 @@ td {
 }
 
 #total-carrito {
-  /* margin-right: 2.5%; */
-  /* margin-top: 10vh; */
   font-size: 18px;
   text-align: center;
   border-radius: 10px;
@@ -320,10 +322,9 @@ td {
   text-align: center;
   display: inline-block;
   padding: 8px 15px;
-  background-color: #092dce;
+  background: linear-gradient(to right, #374151, #9F7AEA);
   color: #fff;
   font-size: 14px;
-  margin-top: 30px;
   margin-left: 5px;
   border-radius: 15px;
 }
@@ -339,19 +340,39 @@ td {
   text-align: center;
   margin: 12px;
   padding: 8px;
-  background-color: #092dce;
+  background: linear-gradient(to right, #374151, #9F7AEA);
   color: #fff;
-  font-size: 16px;
-  margin-top: 50px;
+  font-size: 14px;
+  margin-top: 20px;
   margin-bottom: 50px;
   border-radius: 15px;
   font-style: oblique;
 }
 
 .btnAgregar:hover {
+  background-color: #4764e4;
+  border: 1px solid #4764e4;
+  color: black;
+}
+
+.btnDetalle:hover {
   background-color: #1ad2d8;
   border: 1px solid #1ad2d8;
   color: black;
+}
+
+.btnDetalle {
+  width: 90%;
+  text-align: center;
+  margin-right: 10px;
+  padding: 8px;
+  background: linear-gradient(to right, #374151, #9F7AEA);
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  font-style: oblique;
 }
 
 .tarjeta {
@@ -361,6 +382,23 @@ td {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+}
+
+.tarjeta-product {
+  margin: 5px;
+  border: 2px solid #ddd;
+  padding: 20px;
+  text-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-product .contenido-texto {
+  width: 100%;
+  text-align: start;
 }
 
 .cantidad {
@@ -378,4 +416,54 @@ td {
   height: 40vh;
   border-radius: 10px;
   margin: 10px;
+}
+
+.gallery {
+  background: linear-gradient(to right, #374151, #9F7AEA);
+}
+
+.contenedor-galeria {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.img-galeria {
+  width: 15%;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5)
+}
+
+.imagen-light {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.imagen-light img.agregar-imagen {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.imagen-light img.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  width: 30px;
+  filter: invert(0);
+}
+
+.active {
+  display: flex;
 }

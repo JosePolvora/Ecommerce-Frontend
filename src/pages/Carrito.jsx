@@ -18,11 +18,7 @@ function Carrito() {
         <div className="carritoContainer">
             <h2 className="text-center pt-10 text-3xl">Carrito de Compras</h2>
 
-            <div className="text-base m-1">
-                <a href="http://localhost:5173">Inicio</a>
-            </div>
-
-            <div className='flex justify-start'>
+            <div className='flex justify-start mt-20'>
                 <ul className=' grid-cols-2 gap-3'>
                     {carrito.map((item, i) => (
                         <li className='tarjeta' key={i}>
@@ -68,9 +64,9 @@ function Carrito() {
                         <span className='font-bold text-2xl text-red-500' id="total">Total</span> <span className='text-red-500 pl-2 text-xl italic font-bold' >${total.toFixed(2)}</span> 
                     </div>
 
-                    <section className="btns">
-                        <a href="#" className="btn">Pagar</a>
-                        <button onClick={vaciarCarrito} className="btn">Vaciar Carrito</button>
+                    <section className="mt-16">
+                        <a href="#" className="btn"><span className='font-bold text-base'>Pagar</span></a>
+                        <button onClick={vaciarCarrito} className="btn"><span className='font-bold text-base'>Vaciar Carrito</span></button>
 
                         <a href="http://localhost:5173/productos" className="hover:text-gray-400 ml-5 fixed bottom-5 right-10">
                             ⬅ Continuar comprando

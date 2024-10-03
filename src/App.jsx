@@ -10,16 +10,14 @@ import Ayuda from './pages/Ayuda';
 import Legales from './pages/Legales';
 import TerminoCondiciones from './pages/TerminoCondiciones';
 import ComoComprar from './pages/ComoComprar';
-
-import RecuperarPassword from "./pages/RecuperarPassword"
-import RestablecerPassword from './pages/RestablecerPassword';
-
 import Carrito from './pages/Carrito';
 import Producto from './pages/Producto';
-import Productoxcategoria from "./component/Productoxcategoria"
-
+import Productoxcategoria from "./pages/Productoxcategoria"
+import DetallexProducto from './pages/DetallexProducto';
 import InicioSesion from "./pages/InicioSesion";
 import Registro from './pages/Registro';
+import RecuperarPassword from "./pages/RecuperarPassword"
+import RestablecerPassword from './pages/RestablecerPassword';
 
 import AdminHeader from './admin/AdminHeader';
 import AdminProductos from "./admin/AdminProductos"
@@ -31,9 +29,7 @@ import AdminCategorias from './admin/AdminCategorias';
 import AdminFormCategoria from './admin/AdminFormCategoria';
 import AdminEnvios from "./admin/AdminEnvios";
 import AdminFormEnvio from "./admin/AdminFormEnvio";
-
-
-
+import AdminImagenes from "./admin/AdminImagenes"
 
 function App() {
   return (
@@ -46,21 +42,21 @@ function App() {
           <Route path='footer' element={<Footer />} />
           <Route path='inicioSesion' element={<InicioSesion />} />
           <Route path='registro' element={<Registro />} />
-         
+
           <Route path='recuperar-password' element={<RecuperarPassword />} />
           <Route path='recuperar-password/reset:token' element={<RestablecerPassword />} />
-          
+
           <Route path='contacto' element={<Contacto />} />
           <Route path='ayuda' element={<Ayuda />} />
           <Route path='legales' element={<Legales />} />
           <Route path='terminoCondiciones' element={<TerminoCondiciones />} />
           <Route path='comoComprar' element={<ComoComprar />} />
           <Route path='carrito' element={<Carrito />} />
-         
+
           <Route path='productos' element={<Producto />} />
           <Route path='productoxcategorias' element={<Productoxcategoria />} />
           <Route path="/productos/categoria/:id" element={<Productoxcategoria />} />
-
+          <Route path='/detallexproducto/:id' element={<DetallexProducto />} />
 
         </Route>
 
@@ -88,10 +84,9 @@ function App() {
           <Route path="admin/formenvios" element={<AdminFormEnvio />} />
           <Route path="admin/formenvios/:envio_id" element={<AdminFormEnvio />} />
 
-
+          <Route path="admin/adminimagenes" element={<AdminImagenes />} />
 
         </Route>
-
 
       </Routes>
     </div>

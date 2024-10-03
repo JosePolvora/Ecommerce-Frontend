@@ -3,10 +3,10 @@ function Legales() {
   return (
     <div>
       <div className="legalesContenedor">
-        <div className="flex text-base m-10">
+        {/* <div className="flex text-base m-10">
 
           <a href="http://localhost:5173">Inicio</a>
-        </div>
+        </div> */}
 
         <h1 className="ml-16 mt-10 font-bold">LEGALES</h1>
 
