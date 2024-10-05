@@ -1,5 +1,4 @@
 import Swal from 'sweetalert2';
-
 import React, { createContext, useState, useEffect } from 'react';
 
 export const CarritoContext = createContext();
@@ -29,26 +28,6 @@ export const CarritoProvider = ({ children }) => {
         }
     };
 
-    
-    // ****************VACIAR CARRITO ***************/
-    
-    // Función para vaciar el carrito
-    // const vaciarCarrito = () => {
-    //     setCarrito([]);
-    // };
-
-    
-    // const vaciarCarrito = () => {
-    //     // Mostrar un diálogo de confirmación
-    //     const confirmarVaciado = window.confirm("¿Estás seguro de que deseas vaciar el carrito?");
-
-    //     // Si el usuario confirma, se procede a vaciar el carrito
-    //     if (confirmarVaciado) {
-    //         setCarrito([]);
-    //     }
-    // };
-
-
     const vaciarCarrito = () => {
         Swal.fire({
             title: 'Estás seguro?',
@@ -70,25 +49,6 @@ export const CarritoProvider = ({ children }) => {
         });
     };
 
-// **************** ELIMINAR UN PRODUCTO DEL CARRITO ***************/
-
-    // Función para eliminar un producto del carrito
-    // const eliminarDelCarrito = (productoId) => {
-    //     setCarrito(carrito.filter(producto => producto.producto_id !== productoId));
-    // };
-
-    
-    // const eliminarDelCarrito = (productoId) => {
-    //     // Mostrar un diálogo de confirmación
-    //     const confirmarEliminacion = window.confirm("¿Estás seguro de que deseas eliminar este producto del carrito?");
-
-    //     // Si el usuario confirma, se procede a eliminar el producto
-    //     if (confirmarEliminacion) {
-    //         setCarrito(carrito.filter(producto => producto.producto_id !== productoId));
-    //     }
-    // };
-
-    
     const eliminarDelCarrito = (productoId) => {
         Swal.fire({
             title: 'Estás seguro?',
@@ -110,8 +70,6 @@ export const CarritoProvider = ({ children }) => {
         });
     };
 
-
-
     // Función para actualizar la cantidad de un producto en el carrito
     const actualizarCantidad = (producto_id, cantidad) => {
         setCarrito(carrito.map(item =>
@@ -127,5 +85,3 @@ export const CarritoProvider = ({ children }) => {
         </CarritoContext.Provider>
     );
 };
-
-

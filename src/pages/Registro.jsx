@@ -24,23 +24,21 @@ function Registro() {
       });
 
       if (response.data.ok) {
-        //alert('Usuario registrado exitosamente');
         Swal.fire('Éxito', 'Usuario registrado exitosamente', 'success');
       } else {
-        //alert('Error al registrar el usuario');
         Swal.fire('Error', 'Error al registrar el usuario', 'error');
       }
     } catch (error) {
       console.error('Error al registrar el usuario:', error);
-      //alert('Error en el servidor');
+
       Swal.fire('Error', 'Error en el servidor', 'error');
     }
   };
 
   return (
     <div className='h-full'>
-      <h3 className='text-2xl bg-blue-500 p-2 rounded-t-lg'>Registrate</h3>
-      
+      <h3 className='text-3xl pt-10 rounded-t-lg'>Registrate</h3>
+
       <section className="contenedorForm">
         <div className="formulario">
           <div className="flex mb-8">
@@ -106,9 +104,6 @@ function Registro() {
           </form>
         </div>
       </section>
-      {/* <a href="http://localhost:5173" className="fixed bottom-5 left-5 hover:text-gray-400 ml-5">
-        ⬅ Inicio
-      </a> */}
     </div>
   );
 }

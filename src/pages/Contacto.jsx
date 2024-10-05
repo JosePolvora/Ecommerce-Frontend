@@ -22,21 +22,18 @@ function Mensaje() {
       });
 
       if (response.data.ok) {
-        //alert('Mensaje enviado exitosamente');
         Swal.fire('Éxito', 'Mensaje enviado exitosamente', 'success');
-        // Resetear campos del formulario
         setNombre('');
         setApellido('');
         setEmail('');
         setCelular('');
         setMensaje('');
       } else {
-        //alert('Error al enviar el mensaje');
+
         Swal.fire('Error', 'Error al enviar el mensaje', 'error');
       }
     } catch (error) {
       console.error('Error al enviar el mensaje:', error);
-      //alert('Error en el servidor');
       Swal.fire('Error', 'Error en el servidor', 'error');
     }
   };
@@ -44,8 +41,8 @@ function Mensaje() {
   return (
     <div className='h-full'>
 
-      <h3 className='text-2xl bg-blue-500 p-2 rounded-t-lg mb-20'>Contactanos</h3>
-
+      <h3 className='text-3xl pt-10 rounded-t-lg mb-20'>Contactanos</h3>
+      
       <section className="contenedorForm">
 
         <div className="horario">
@@ -137,14 +134,10 @@ function Mensaje() {
               onChange={(e) => setMensaje(e.target.value)}
               required
             />
-            {/* <button type="submit">Enviar Mensaje</button> */}
             <input className="btnForm" type="submit" value="Enviar"></input>
           </form>
         </div>
       </section>
-      {/* <a href="http://localhost:5173" className="fixed bottom-5 left-5 hover:text-gray-400 ml-5">
-        ⬅ Inicio
-      </a> */}
     </div>
   );
 }

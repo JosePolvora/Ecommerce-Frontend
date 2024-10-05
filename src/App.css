@@ -294,22 +294,9 @@ td {
   color: black;
 }
 
-.contenedor-total {
-  margin-left: 15%;
-  margin-top: 1%;
-  padding: 2%;
-  margin-bottom: 40%;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-#total-carrito {
-  font-size: 18px;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid;
+.contenedor-pagar{
+  height: 100vh;
+  position: sticky;
 }
 
 .btns {
@@ -379,9 +366,16 @@ td {
   margin: 5px;
   border: 2px solid #ddd;
   padding: 20px;
-  text-align: center;
+  text-align: center; /* Centra el contenido en línea (incluida la imagen) */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+}
+
+.tarjeta img {
+  display: block;
+  margin: 0 auto; /* Esto asegura que la imagen esté centrada horizontalmente */
+  max-width: 100%; /* Asegura que la imagen no se salga de la tarjeta */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .tarjeta-product {

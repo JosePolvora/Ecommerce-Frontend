@@ -1,7 +1,10 @@
 import { Outlet, Link } from 'react-router-dom';
 import Footer from '../pages/Footer';
 
+
+
 const Layout = () => {
+  
     return (
         <div>
 
@@ -21,6 +24,7 @@ const Layout = () => {
                             <a href="http://localhost:5173/carrito">
                                 <img src="" id="imgCarrito" />
                             </a>
+
                         </div>
                     </div>
 
@@ -44,7 +48,7 @@ const Layout = () => {
                                     <li className="mx-2"><Link to="/productos/categoria/6">Aceites de oliva</Link></li>
                                 </ul>
                             </li>
-                            
+
                             <li><Link className="text-xl" to="/contacto">Contacto</Link></li>
                             <li><Link className="text-xl" to="/footer"></Link></li>
                         </ul>
