@@ -27,7 +27,7 @@ function Home() {
                         <img
                             src="./src/images/vinos.jpg"
                             alt="Vinos"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => navigate('/productos/categoria/1')}
                         />
                         <div className="absolute bottom-0 w-full text-center bg-black bg-opacity-50 text-white p-1 rounded-b-lg">
@@ -38,7 +38,7 @@ function Home() {
                         <img
                             src="./src/images/1006767.png"
                             alt="Cafés"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => navigate('/productos/categoria/2')}
                         />
                         <div className="absolute bottom-0 w-full text-center bg-black bg-opacity-50 text-white p-1 rounded-b-lg">
@@ -49,7 +49,7 @@ function Home() {
                         <img
                             src="./src/images/658.png"
                             alt="Espumantes"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => navigate('/productos/categoria/3')}
                         />
                         <div className="absolute bottom-0 w-full text-center bg-black bg-opacity-50 text-white p-1 rounded-b-lg">
@@ -60,7 +60,7 @@ function Home() {
                         <img
                             src="./src/images/1003777.png"
                             alt="Chocolates"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => {
                                 navigate('/productos/categoria/4');
                             }}
@@ -73,7 +73,7 @@ function Home() {
                         <img
                             src="./src/images/espirituosas.jpg"
                             alt="Espirituosas"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => {
                                 navigate('/productos/categoria/5');
                             }}
@@ -86,7 +86,7 @@ function Home() {
                         <img
                             src="./src/images/aceites.jpg"
                             alt="Aceites"
-                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500"
+                            className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-700 to-purple-500 cursor-pointer"
                             onClick={() => {
                                 navigate('/productos/categoria/6');
                             }}

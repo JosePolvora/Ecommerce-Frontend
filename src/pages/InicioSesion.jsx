@@ -33,7 +33,7 @@ function InicioSesion() {
 
       if (response.data.ok) {
         Swal.fire('Éxito', 'Inicio de sesión exitoso', 'success');
-        window.location.href = 'http://localhost:5173/';
+        window.location.href = 'http://localhost:5173/header';
       } else {
         Swal.fire('Error', 'Credenciales incorrectas', 'error');
       }

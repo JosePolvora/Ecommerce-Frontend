@@ -56,22 +56,22 @@ function Productosxcategoria() {
 
                     return (
                         <div key={item.productoProductoId}>
-                            <div className="tarjeta" onClick={() => handleVerDetalles(item.productoxcategoria_id)}>
+                            <div className="tarjeta-product" onClick={() => handleVerDetalles(item.productoxcategoria_id)}>
 
                                 <img
-                                    className="w-30 h-15"
+                                    className="cursor-pointer"
                                     src={item.producto.imagen}
                                     alt={item.producto.nombre}
                                 />
-                                <div className="text-lg text-left">
+                                <div className="contenido-texto">
                                     <span className="font-bold">Nombre: </span>
                                     {item.producto.nombre}
                                 </div>
-                                <div className="text-lg text-left">
+                                <div className="contenido-texto">
                                     <span className="font-bold">Precio: </span>
                                     $ {item.producto.precio}
                                 </div>
-                                <div className="text-base text-left">
+                                <div className="contenido-texto">
                                     <span className="font-bold">Descripción: </span>
                                     {item.producto.descripcion}
                                 </div>

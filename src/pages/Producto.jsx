@@ -58,9 +58,11 @@ const Producto = () => {
                 {productosFiltrados.length > 0 ? productosFiltrados.map((item, i) => (
                     <div key={i}>
                         <div className="tarjeta-product" onClick={() => handleVerDetalles(item.producto_id)}>
-                        
-                            <img className="w-50 h-85" src={item.imagen} alt={item.nombre} />
-                            
+
+                            <img className="cursor-pointer"
+                                src={item.imagen}
+                                alt={item.nombre} />
+
                             <div className="contenido-texto">
                                 <span className="font-bold">Nombre: </span>
                                 {item.nombre}

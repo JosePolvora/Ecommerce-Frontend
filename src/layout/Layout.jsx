@@ -50,22 +50,22 @@ const Layout = () => {
                             </li>
 
                             <li><Link className="text-xl" to="/contacto">Contacto</Link></li>
-                            <li><Link className="text-xl" to="/footer"></Link></li>
+                            {/* <li><Link className="text-xl" to="/footer"></Link></li> */}
                         </ul>
                     </nav>
                 </header>
-                <li>
+                {/* <li>
                     <Link to="/header"></Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/inicioSesion"></Link>
                 </li>
                 <li>
                     <Link to="/registro"></Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/productos"></Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/detallexproducto/:id"></Link>
                 </li>
@@ -75,9 +75,9 @@ const Layout = () => {
                 <li>
                     <Link to="/recuperar-password/reset:token"></Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/contacto"></Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/ayuda"></Link>
                 </li>
