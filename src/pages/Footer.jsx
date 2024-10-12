@@ -1,6 +1,6 @@
 function PiePagina() {
     return (
-        <div>
+        <div className="">
             <footer className="footer">
 
                 <div className="links">
@@ -12,10 +12,10 @@ function PiePagina() {
                             <a href="https://facebook.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-facebook'></i>
                             </a>
-                            {/* <a href="https://twitter.com" target="_blank" className="social-media-icon-fi">
+                            <a href="https://twitter.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-twitter' ></i>
-                            </a> */}
-                            <a href="https://x.com/" target="_blank" className="social-media-icon">
+                            </a>
+                            {/* <a href="https://x.com/" target="_blank" className="social-media-icon">
 
                                 <img
                                     src="./src/images/x.png"
@@ -23,7 +23,7 @@ function PiePagina() {
                                     className="w-60 h-15"
                                 />
 
-                            </a>
+                            </a> */}
                             <a href="https://instagram.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-instagram' ></i>
                             </a>
