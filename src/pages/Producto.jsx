@@ -103,7 +103,6 @@
 
 // export default Producto;
 
-
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -114,29 +113,23 @@ const Producto = () => {
     const { agregarAlCarrito } = useContext(CarritoContext);
     const [productos, setProductos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
-    const [pagina, setPagina] = useState(1);
-    const [totalPaginas, setTotalPaginas] = useState(1);
+    const [paginaActual, setPaginaActual] = useState(1); // Página actual
+    const [totalPaginas, setTotalPaginas] = useState(1); // Total de páginas
+    const productosPorPagina = 8; // Cantidad de productos por página
     const navigate = useNavigate();
 
-
-    const cantidadPorPagina = 8;
-
-    const obtenerProductos = (paginaActual) => {
-
-        axios.get(`http://localhost:3000/api/productos/lista?pagina=${paginaActual}&cantidad=${cantidadPorPagina}`)
-            .then((respuesta) => {
-
-                setProductos(respuesta.data.body.rows);
-                
-                const totalProductos = respuesta.data.body.count;
-                setTotalPaginas(Math.ceil(totalProductos / cantidadPorPagina));
-            })
-    };
-
     useEffect(() => {
-        obtenerProductos(pagina);
-    }, [pagina]);
+        obtenerProductos(paginaActual);
+    }, [paginaActual]);
 
+    const obtenerProductos = (pagina) => {
+        axios.get(`http://localhost:3000/api/productos?pagina=${pagina}&cantidad=${productosPorPagina}`)
+            .then((respuesta) => {
+                setProductos(respuesta.data.body);
+                setTotalPaginas(respuesta.data.totalPaginas); // Establecer el total de páginas
+            })
+            .catch((error) => console.error("Error al obtener los datos:", error));
+    };
 
     const productosFiltrados = productos.filter(producto =>
         producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
@@ -154,18 +147,21 @@ const Producto = () => {
         });
     };
 
-    // Función para manejar la redirección a DetalleProducto
     const handleVerDetalles = (producto_id) => {
         navigate(`/detallexproducto/${producto_id}`);
     };
 
-    // Funciones de paginación
-    const paginaAnterior = () => {
-        if (pagina > 1) setPagina(pagina - 1);
+    // Funciones para cambiar de página
+    const paginaSiguiente = () => {
+        if (paginaActual < totalPaginas) {
+            setPaginaActual(paginaActual + 1);
+        }
     };
 
-    const paginaSiguiente = () => {
-        if (pagina < totalPaginas) setPagina(pagina + 1);
+    const paginaAnterior = () => {
+        if (paginaActual > 1) {
+            setPaginaActual(paginaActual - 1);
+        }
     };
 
     return (
@@ -182,14 +178,11 @@ const Producto = () => {
                 />
             </div>
 
-            <div className="m-10 grid grid-cols-3 gap-6">
+            <div className="m-10 grid grid-cols-4 gap-6">
                 {productosFiltrados.length > 0 ? productosFiltrados.map((item, i) => (
                     <div key={i}>
                         <div className="tarjeta-product" onClick={() => handleVerDetalles(item.producto_id)}>
-                            <img className="cursor-pointer"
-                                src={item.imagen}
-                                alt={item.nombre} />
-
+                            <img className="cursor-pointer" src={item.imagen} alt={item.nombre} />
                             <div className="contenido-texto">
                                 <span className="font-bold">Nombre: </span>
                                 {item.nombre}
@@ -204,14 +197,12 @@ const Producto = () => {
                             </div>
                         </div>
 
-                        <div className='flex'>
-                            <div className="btnAgregar">
-                                <button onClick={() => handleAgregarAlCarrito(item)}>
+                        <div className='block mx-auto'>
+                            <div className="flex flex-col items-center gap-2">
+                                <button onClick={() => handleAgregarAlCarrito(item)} className="w-52 px-4 py-2 mt-5 bg-blue-500 text-white rounded">
                                     <span className='font-bold'>Agregar al carrito</span>
                                 </button>
-                            </div>
-                            <div className="btnDetalle">
-                                <button onClick={() => handleVerDetalles(item.producto_id)}>
+                                <button onClick={() => handleVerDetalles(item.producto_id)} className="w-52 px-4 py-2 bg-gray-500 text-white rounded">
                                     <span className='font-bold'>Ver Detalles</span>
                                 </button>
                             </div>
@@ -222,22 +213,22 @@ const Producto = () => {
                 )}
             </div>
 
-            {/* Paginación */}
-            <div className="flex justify-center items-center mt-6 mb-6">
-                <button
-                    className="px-4 py-2 bg-gray-300 rounded mx-2"
-                    onClick={paginaAnterior}
-                    disabled={pagina === 1}
+            {/* Controles de paginación */}
+            <div className="flex justify-center mt-10 mb-10">
+                <button 
+                    onClick={paginaAnterior} 
+                    disabled={paginaActual === 1} 
+                    className={`text-sm mr-4 px-4 py-1 bg-gray-500 text-white rounded ${paginaActual === 1 ? 'opacity-50' : ''}`}
                 >
-                    Anterior
+                    Página Anterior
                 </button>
-                <span>Página {pagina} de {totalPaginas}</span>
-                <button
-                    className="px-4 py-2 bg-gray-300 rounded mx-2"
-                    onClick={paginaSiguiente}
-                    disabled={pagina === totalPaginas}
+                <span className="text-lg font-bold">{`Página ${paginaActual} de ${totalPaginas}`}</span>
+                <button 
+                    onClick={paginaSiguiente} 
+                    disabled={paginaActual === totalPaginas} 
+                    className={`text-sm ml-4 px-4 py-1 bg-gray-500 text-white rounded ${paginaActual === totalPaginas ? 'opacity-50' : ''}`}
                 >
-                    Siguiente
+                    Página Siguiente
                 </button>
             </div>
         </section>
