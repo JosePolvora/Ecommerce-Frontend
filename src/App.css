@@ -258,62 +258,6 @@ td {
   /* height: 100vh; */
   position: sticky;
 }
-.btns {
-  display: flex;
-  justify-content: space-between;
-}
-.btn {
-  width: 30vh;
-  text-align: center;
-  display: inline-block;
-  padding: 8px 15px;
-  background: linear-gradient(to right, #374151, #9F7AEA);
-  color: #fff;
-  font-size: 14px;
-  margin-left: 5px;
-  border-radius: 15px;
-}
-.btn:hover {
-  background-color: #1ad2d8;
-  border: 1px solid #1ad2d8;
-  color: black;
-}
-.btnAgregar {
-  width: 100%;
-  text-align: center;
-  margin: 12px;
-  padding: 8px;
-  background: linear-gradient(to right, #374151, #9F7AEA);
-  color: #fff;
-  font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  border-radius: 15px;
-  font-style: oblique;
-}
-.btnAgregar:hover {
-  background-color: #4764e4;
-  border: 1px solid #4764e4;
-  color: black;
-}
-.btnDetalle:hover {
-  background-color: #1ad2d8;
-  border: 1px solid #1ad2d8;
-  color: black;
-}
-.btnDetalle {
-  width: 90%;
-  text-align: center;
-  margin-right: 10px;
-  padding: 8px;
-  background: linear-gradient(to right, #374151, #9F7AEA);
-  color: white;
-  font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  border-radius: 15px;
-  font-style: oblique;
-}
 .tarjeta img {
   display: block;
   margin: 0 auto;

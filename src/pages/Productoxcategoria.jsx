@@ -50,7 +50,7 @@ function Productosxcategoria() {
         <section className='ml-28 mr-28 mt-10'>
             <h3 className="text-center pt-1 text-3xl mb-10">Productos por Categoria</h3>
 
-            <div className="m-10 grid grid-cols-3">
+            <div className="m-10 grid grid-cols-4 gap-6">
                 {productos.map((item) => {
                     console.log("Producto item:", item);
 
@@ -78,9 +78,8 @@ function Productosxcategoria() {
                             </div>
                             <div className='flex'>
 
-                                <div className="btnAgregar">
+                                {/* <div className="btnAgregar">
                                     <button onClick={() => handleAgregarAlCarrito(item.producto)}>
-                                        {/* <button onClick={() => agregarAlCarrito(item.producto)}> */}
                                         <span className='font-bold'>Agregar al carrito</span>
                                     </button>
                                 </div>
@@ -88,7 +87,21 @@ function Productosxcategoria() {
                                     <button onClick={() => handleVerDetalles(item.productoxcategoria_id)}>
                                         <span className='font-bold'>Ver Detalles</span>
                                     </button>
+                                </div> */}
+
+                                <div className='block mx-auto'>
+                                    <div className="flex flex-col items-center gap-2">
+                                        <button onClick={() => handleAgregarAlCarrito(item.producto)} className="w-52 px-4 py-2 mt-5 bg-blue-500 text-white rounded">
+                                            <span className='font-bold'>Agregar al carrito</span>
+                                        </button>
+                                        <button onClick={() => handleVerDetalles(item.productoxcategoria_id)} className="w-52 px-4 py-2 bg-gray-500 text-white rounded">
+                                            <span className='font-bold'>Ver Detalles</span>
+                                        </button>
+                                    </div>
                                 </div>
+
+
+
                             </div>
                         </div>
                     );
