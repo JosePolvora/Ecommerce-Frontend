@@ -32,7 +32,7 @@ const ComoComprar = () => {
         paso="Paso 2"
         titulo="Añade al Carrito"
         descripcion="Selecciona las opciones de tu producto y añádelo al carrito de compras."
-        imagen="/ruta-a-tu-imagen/anadir-carrito-ejemplo.jpg"
+        imagen="/src/images/como-comprar1.jpg"
         altText="Botón añadir al carrito"
       />
 
