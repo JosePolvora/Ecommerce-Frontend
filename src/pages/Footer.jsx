@@ -1,6 +1,7 @@
 function PiePagina() {
     return (
         <div className="">
+
             <footer className="footer">
 
                 <div className="links">
@@ -12,9 +13,9 @@ function PiePagina() {
                             <a href="https://facebook.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-facebook'></i>
                             </a>
-                            <a href="https://twitter.com" target="_blank" className="social-media-icon-fi">
+                            {/* <a href="https://twitter.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-twitter' ></i>
-                            </a>
+                            </a> */}
                             {/* <a href="https://x.com/" target="_blank" className="social-media-icon">
 
                                 <img
@@ -81,7 +82,7 @@ function PiePagina() {
 
                     <div className="link">
                         <h3>Enlaces útiles</h3>
-                        <ul>
+                        <ul className="ml-14">
 
                             <li><a href="http://localhost:5173/contacto">Contacto</a></li>
                             <li><a href="http://localhost:5173/comoComprar">Como Comprar</a></li>
@@ -94,13 +95,14 @@ function PiePagina() {
                 </div>
                 <hr />
 
-                <div className="text-center bg-gradient-to-r from-slate-700 to-purple-500 shadow-lg p-4">
-
+                {/* <div className="text-center bg-gradient-to-r from-slate-700 to-purple-500 shadow-lg p-4"> */}
+                <div className="text-center bg-black shadow-lg p-4">
                     <div className="logoDerechos">
-                        <h2>JosemaDesing</h2>
+                        {/* <h2>JosemaDesing</h2> */}
                         <p className="text-sm font-sans text-white">
+                        
                             &copy;
-                            2024 JosemaDesing. Todos los derechos reservados.<br></br>
+                            JosemaDesing 2024. Todos los derechos reservados.<br></br>
                             Desarrollado por José Oviedo.
                         </p>
 

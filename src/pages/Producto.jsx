@@ -166,9 +166,9 @@ const Producto = () => {
 
     return (
         <section className='ml-28 mr-28 mt-10'>
-            <h3 className="text-center pt-1 text-3xl mb-10">Nuestros Productos</h3>
+            <h3 className="text-center pt-1 text-3xl mb-10"></h3>
 
-            <div className="flex justify-center items-center mb-5">
+            {/* <div className="flex justify-center items-center mb-5">
                 <input
                     type="text"
                     className="p-2 pl-10 border border-gray-300 rounded"
@@ -176,7 +176,7 @@ const Producto = () => {
                     value={busqueda}
                     onChange={(e) => setBusqueda(e.target.value)}
                 />
-            </div>
+            </div> */}
 
             <div className="m-10 grid grid-cols-4 gap-6">
                 {productosFiltrados.length > 0 ? productosFiltrados.map((item, i) => (
@@ -199,10 +199,10 @@ const Producto = () => {
 
                         <div className='block mx-auto'>
                             <div className="flex flex-col items-center gap-2">
-                                <button onClick={() => handleAgregarAlCarrito(item)} className="w-52 px-4 py-2 mt-5 bg-blue-500 text-white rounded">
+                                <button onClick={() => handleAgregarAlCarrito(item)} className="w-52 px-4 py-2 mt-5 bg-red-900 text-white rounded">
                                     <span className='font-bold'>Agregar al carrito</span>
                                 </button>
-                                <button onClick={() => handleVerDetalles(item.producto_id)} className="w-52 px-4 py-2 bg-gray-500 text-white rounded">
+                                <button onClick={() => handleVerDetalles(item.producto_id)} className="w-52 px-4 py-2 bg-neutral-950 text-white rounded">
                                     <span className='font-bold'>Ver Detalles</span>
                                 </button>
                             </div>
@@ -218,7 +218,7 @@ const Producto = () => {
                 <button 
                     onClick={paginaAnterior} 
                     disabled={paginaActual === 1} 
-                    className={`text-sm mr-4 px-4 py-1 bg-gray-500 text-white rounded ${paginaActual === 1 ? 'opacity-50' : ''}`}
+                    className={`text-sm mr-4 px-4 py-1 bg-red-900 text-white rounded ${paginaActual === 1 ? 'opacity-50' : ''}`}
                 >
                     Página Anterior
                 </button>
@@ -226,7 +226,7 @@ const Producto = () => {
                 <button 
                     onClick={paginaSiguiente} 
                     disabled={paginaActual === totalPaginas} 
-                    className={`text-sm ml-4 px-4 py-1 bg-gray-500 text-white rounded ${paginaActual === totalPaginas ? 'opacity-50' : ''}`}
+                    className={`text-sm ml-4 px-4 py-1 bg-red-900 text-white rounded ${paginaActual === totalPaginas ? 'opacity-50' : ''}`}
                 >
                     Página Siguiente
                 </button>

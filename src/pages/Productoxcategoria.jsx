@@ -48,7 +48,7 @@ function Productosxcategoria() {
 
     return (
         <section className='ml-28 mr-28 mt-10'>
-            <h3 className="text-center pt-1 text-3xl mb-10">Productos por Categoria</h3>
+            <h3 className="text-center pt-1 text-3xl mb-10"></h3>
 
             <div className="m-10 grid grid-cols-4 gap-6">
                 {productos.map((item) => {
@@ -91,10 +91,10 @@ function Productosxcategoria() {
 
                                 <div className='block mx-auto'>
                                     <div className="flex flex-col items-center gap-2">
-                                        <button onClick={() => handleAgregarAlCarrito(item.producto)} className="w-52 px-4 py-2 mt-5 bg-blue-500 text-white rounded">
+                                        <button onClick={() => handleAgregarAlCarrito(item.producto)} className="w-52 px-4 py-2 mt-5 bg-red-900 text-white rounded">
                                             <span className='font-bold'>Agregar al carrito</span>
                                         </button>
-                                        <button onClick={() => handleVerDetalles(item.productoxcategoria_id)} className="w-52 px-4 py-2 bg-gray-500 text-white rounded">
+                                        <button onClick={() => handleVerDetalles(item.productoxcategoria_id)} className="w-52 px-4 py-2 bg-neutral-950 text-white rounded">
                                             <span className='font-bold'>Ver Detalles</span>
                                         </button>
                                     </div>

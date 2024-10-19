@@ -20,7 +20,7 @@
   font-size: 30px;
   color: whitesmoke;
   margin-left: 25px;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   font-family: "Ranchers", sans-serif;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
 }
@@ -45,18 +45,21 @@
   background-image: url("./images/cuenta.svg");
 }
 h1 {
-  font-family: "Revalia", sans-serif;
+  /* font-family: "Revalia", sans-serif; */
+  /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   */
+   font-family: 'Roboto', sans-serif;
 }
-.header-content h1 {
+/* .header-content h1 {
   font-size: 90px;
   color: rgb(20, 175, 167);
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   font-family: "Revalia", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} */
 .nav {
-  padding-bottom: 70px;
+  /* padding-bottom: 60px; */
   position: relative;
 }
 .nav li ul {
@@ -68,15 +71,30 @@ h1 {
   display: block;
 }
 .nav li a {
-  font-family: "Revalia", sans-serif;
+  /* font-family: "Revalia", sans-serif; */
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+
+  letter-spacing: 1px;
+  /* color: #fff; */
+  
+  text-decoration: none;
+}
+.nav li a:hover {
+  /* color: rgb(20, 175, 167); */
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.galery{
+  /* font-family: "Revalia", sans-serif; */
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   */
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   color: #fff;
   text-decoration: none;
 }
-.nav li a:hover {
-  color: rgb(20, 175, 167);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+
 
 /*--------------------ESTILOS DEL MAIN--------------------*/
 
@@ -99,8 +117,10 @@ h3 {
 
 .footer {
   position: relative;
-  height: 90%;
-  background-image: linear-gradient(to top, rgba(251, 194, 235, 0.386) 0%, hsla(218, 68%, 79%, 0.114) 100%), url(./images/fondoFoot.jpg);
+  height: 50vh;
+  background-color: rgba(90, 0, 1); /* 1 es opacidad completa */
+
+  /* background-image: linear-gradient(to top, rgba(251, 194, 235, 0.386) 0%, hsla(218, 68%, 79%, 0.114) 100%), url(./images/fondoFoot.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -108,7 +128,7 @@ h3 {
 .social-media {
   display: flex;
 }
-.social-media-icon {
+/* .social-media-icon {
   display: inline-block;
   margin-left: 15px;
   width: 60px;
@@ -117,10 +137,11 @@ h3 {
   border-radius: 50%;
   text-align: center;
   color: #fff;
-}
+} */
 .social-media-icon-fi {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 50px;
+  margin-right: -35px;
   width: 60px;
   height: 60px;
   border: 1px solid #fff;
@@ -131,10 +152,10 @@ h3 {
   line-height: 60px;
   background-color: black;
 }
-.social-media-icon:hover {
+/* .social-media-icon:hover {
   background: rgba(0, 149, 214, 0.9);
   color: #fff;
-}
+} */
 .social-media-icon-fi:hover {
   background: black;
   color: rgba(0, 149, 214, 0.9);
@@ -149,39 +170,43 @@ h3 {
   justify-content: space-between;
   margin-left: 35px;
   margin-top: 1px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  margin-right: 25%;
 }
 .link {
   width: 25%;
-  margin-right: 35px;
+  margin-right: 25px;
 }
 .link h3 {
   font-size: 20px;
-  color: black;
-  text-shadow: 2px 2px 4px rgba(0, 149, 214, 0.9);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  /* text-shadow: 2px 2px 4px rgba(0, 149, 214, 0.9); */
   margin-bottom: 25px;
-  margin-left: -20%;
+  /* margin-left: -20%; */
   font-weight: bold;
 }
 .link p {
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  padding-left: 55px;
 }
 .link ul li a {
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
-  margin-bottom: 10px;
+  /* padding-left: 50px; */
+  margin-bottom: 5px;
 }
-.logoDerechos {
-  font-size: 40px;
+/* .logoDerechos {
+  font-size: 10px;
   color: rgb(0, 149, 214);
   font-family: "Ranchers", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 149, 214, 0.9);
   padding-bottom: 1%;
-}
+} */
 
 /*--------------------ESTILOS DEL FORMULARIO--------------------*/
 
@@ -292,9 +317,11 @@ td {
   border-radius: 10px;
   margin: 10px;
 }
-.gallery {
+
+/*--------------------ESTILOS DE LA GALERIA--------------------*/
+/* .gallery {
   background: linear-gradient(to right, #374151, #9F7AEA);
-}
+} */
 .contenedor-galeria {
   padding: 50px;
   display: flex;
