@@ -41,7 +41,7 @@ function Mensaje() {
   return (
     <div className='h-full'>
 
-      <h3 className='text-3xl pt-10 rounded-t-lg mb-20'>Contactanos</h3>
+      <h3 className='text-3xl pt-20 rounded-t-lg mb-1 font-bold'>Contacto</h3>
       
       <section className="contenedorForm">
 

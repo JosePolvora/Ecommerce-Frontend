@@ -1,10 +1,10 @@
 import { Carousel } from "flowbite-react";
 
-import Slide1 from "/src/images/copas-vino-tinto.jpg";
-import Slide2 from "/src/images/mesa.jpg";
+import Slide1 from "/src/images/descuento.png";
+import Slide2 from "/src/images/beneficios.png";
 import Slide3 from "/src/images/picada.png";
-// import Slide4 from "/src/images/brindis.jpg";
-// import Slide5 from "/src/images/uva.jpg";
+import Slide4 from "/src/images/brindis.jpg";
+import Slide5 from "/src/images/mesa.jpg";
 
 const Banner = () => {
     return (
@@ -17,9 +17,9 @@ const Banner = () => {
             
                 <img src={Slide1} alt="..." className="w-full h-full object-cover rounded-lg" />
                 <img src={Slide2} alt="..." className="w-full h-full object-cover rounded-lg" />
-                <img src={Slide3} alt="Slide 3" className="w-full h-full object-cover rounded-lg" />
-                {/* <img src={Slide4} alt="Slide 4" className="w-full h-full object-cover rounded-lg" />
-                <img src={Slide5} alt="Slide 5" className="w-full h-full object-cover rounded-lg" /> */}
+                <img src={Slide3} alt="..." className="w-full h-full object-cover rounded-lg" />
+                <img src={Slide4} alt="..." className="w-full h-full object-cover rounded-lg" />
+                <img src={Slide5} alt="..." className="w-full h-full object-cover rounded-lg" />
             </Carousel>
         </div>
     );

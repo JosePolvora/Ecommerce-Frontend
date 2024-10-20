@@ -37,16 +37,16 @@ function Registro() {
 
   return (
     <div className='h-full'>
-      <h3 className='text-3xl pt-10 rounded-t-lg'>Registrate</h3>
-
+      <h3 className='text-3xl pt-20 rounded-t-lg font-bold'>Crear cuenta</h3>
+      
       <section className="contenedorForm">
         <div className="formulario">
           <div className="flex mb-8">
             <h6>
-              <i className='bx bxs-help-circle pr-1'></i>
-              ¿Ya tenés una cuenta?
+              <i className='bx bxs-help-circle pr-1 text-white'></i>
+              <span className='text-white'>¿Ya tenés una cuenta?</span>
             </h6>
-            <a href="http://localhost:5173/inicioSesion" className="pl-3">
+            <a href="http://localhost:5173/inicioSesion" className="pl-3 text-white">
               ¡Iniciá sesión!
             </a>
           </div>

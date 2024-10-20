@@ -168,16 +168,6 @@ const Producto = () => {
         <section className='ml-28 mr-28 mt-10'>
             <h3 className="text-center pt-1 text-3xl mb-10"></h3>
 
-            {/* <div className="flex justify-center items-center mb-5">
-                <input
-                    type="text"
-                    className="p-2 pl-10 border border-gray-300 rounded"
-                    placeholder="Buscar producto..."
-                    value={busqueda}
-                    onChange={(e) => setBusqueda(e.target.value)}
-                />
-            </div> */}
-
             <div className="m-10 grid grid-cols-4 gap-6">
                 {productosFiltrados.length > 0 ? productosFiltrados.map((item, i) => (
                     <div key={i}>

@@ -9,6 +9,9 @@ function FormProductos() {
     const [precio, setPrecio] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [imagen, setImagen] = useState('');
+    const [imagenUno, setImagenUno] = useState('');
+    const [imagenDos, setImagenDos] = useState('');
+    const [imagenTres, setImagenTres] = useState('');
     const [disponible, setDisponible] = useState(false);
 
     const [categorias, setCategorias] = useState([]);
@@ -38,6 +41,9 @@ function FormProductos() {
                         setDescripcion(producto.descripcion);
                         setDisponible(producto.disponible);
                         setImagen(producto.imagen);
+                        setImagenUno(producto.imagenUno);
+                        setImagenDos(producto.imagenDos);
+                        setImagenTres(producto.imagenTres);
                         setCategoriaSeleccionada(producto.categoria);
                     } else {
                         console.error("Error en la respuesta del servidor");
@@ -60,6 +66,9 @@ function FormProductos() {
                 descripcion,
                 disponible,
                 imagen,
+                imagenUno,
+                imagenDos,
+                imagenTres,
                 categoria: categoriaSeleccionada,
             });
 
@@ -94,6 +103,9 @@ function FormProductos() {
                 descripcion,
                 disponible,
                 imagen,
+                imagenUno,
+                imagenDos,
+                imagenTres,
                 categoria: categoriaSeleccionada,
             });
 
@@ -160,6 +172,33 @@ function FormProductos() {
                             className="inp"
                             value={imagen}
                             onChange={(e) => setImagen(e.target.value)}
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="ImagenUno"
+                            className="inp"
+                            value={imagenUno}
+                            onChange={(e) => setImagenUno(e.target.value)}
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="ImagenDos"
+                            className="inp"
+                            value={imagenDos}
+                            onChange={(e) => setImagenDos(e.target.value)}
+                            required
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="ImagenTres"
+                            className="inp"
+                            value={imagenTres}
+                            onChange={(e) => setImagenTres(e.target.value)}
                             required
                         />
 

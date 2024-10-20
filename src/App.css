@@ -11,23 +11,26 @@
   text-decoration: none;
   list-style: none;
 }
+
 .header {
   display: grid;
   position: relative;
   height: 100vh;
 }
+
 .logo {
   font-size: 30px;
   color: whitesmoke;
   margin-left: 25px;
-  /* margin-top: 25px; */
   font-family: "Ranchers", sans-serif;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
 }
+
 .iconos {
   display: flex;
   justify-content: flex-end;
 }
+
 #imgCarrito {
   background-repeat: no-repeat;
   background-position: right;
@@ -36,6 +39,7 @@
   margin-left: 10px;
   background-image: url("./images/car.svg");
 }
+
 #imgCuenta {
   background-repeat: no-repeat;
   background-position: right;
@@ -44,57 +48,41 @@
   margin-right: 10px;
   background-image: url("./images/cuenta.svg");
 }
+
 h1 {
-  /* font-family: "Revalia", sans-serif; */
-  /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   */
-   font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-/* .header-content h1 {
-  font-size: 90px;
-  color: rgb(20, 175, 167);
-  font-weight: 800;
-  margin-bottom: 16px;
-  font-family: "Revalia", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-} */
+
 .nav {
-  /* padding-bottom: 60px; */
   position: relative;
 }
+
 .nav li ul {
   display: none;
   position: absolute;
   min-width: 140px;
 }
+
 .nav li:hover>ul {
   display: block;
 }
-.nav li a {
-  /* font-family: "Revalia", sans-serif; */
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: 'Roboto', sans-serif;
 
+.nav li a {
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
-  /* color: #fff; */
-  
   text-decoration: none;
 }
-.nav li a:hover {
-  /* color: rgb(20, 175, 167); */
 
+.nav li a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.galery{
-  /* font-family: "Revalia", sans-serif; */
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   */
+
+.galery {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   color: #fff;
   text-decoration: none;
 }
-
 
 /*--------------------ESTILOS DEL MAIN--------------------*/
 
@@ -106,11 +94,12 @@ h1 {
   color: blue;
   letter-spacing: 1px
 }
+
 h3 {
   text-align: center;
   padding-top: 20px;
-  font-family: "Revalia", sans-serif;
-  letter-spacing: 1px
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
 }
 
 /*--------------------ESTILOS DEL FOOTER--------------------*/
@@ -118,26 +107,18 @@ h3 {
 .footer {
   position: relative;
   height: 50vh;
-  background-color: rgba(90, 0, 1); /* 1 es opacidad completa */
-
+  background-color: rgba(90, 0, 1);
+  /* 1 es opacidad completa */
   /* background-image: linear-gradient(to top, rgba(251, 194, 235, 0.386) 0%, hsla(218, 68%, 79%, 0.114) 100%), url(./images/fondoFoot.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .social-media {
   display: flex;
 }
-/* .social-media-icon {
-  display: inline-block;
-  margin-left: 15px;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  text-align: center;
-  color: #fff;
-} */
+
 .social-media-icon-fi {
   display: inline-block;
   margin-left: 50px;
@@ -152,19 +133,18 @@ h3 {
   line-height: 60px;
   background-color: black;
 }
-/* .social-media-icon:hover {
-  background: rgba(0, 149, 214, 0.9);
-  color: #fff;
-} */
+
 .social-media-icon-fi:hover {
   background: black;
   color: rgba(0, 149, 214, 0.9);
   border: 3px solid rgba(0, 149, 214, 0.9);
 }
+
 .social-media-icon i {
   font-size: 30px;
   line-height: 60px;
 }
+
 .links {
   display: flex;
   justify-content: space-between;
@@ -173,19 +153,20 @@ h3 {
   margin-bottom: 5%;
   margin-right: 25%;
 }
+
 .link {
   width: 25%;
   margin-right: 25px;
 }
+
 .link h3 {
   font-size: 20px;
   color: white;
   font-family: 'Roboto', sans-serif;
-  /* text-shadow: 2px 2px 4px rgba(0, 149, 214, 0.9); */
   margin-bottom: 25px;
-  /* margin-left: -20%; */
   font-weight: bold;
 }
+
 .link p {
   display: inline-block;
   font-size: 12px;
@@ -193,20 +174,13 @@ h3 {
   margin-bottom: 5px;
   padding-left: 55px;
 }
+
 .link ul li a {
   display: inline-block;
   font-size: 12px;
   color: #fff;
-  /* padding-left: 50px; */
   margin-bottom: 5px;
 }
-/* .logoDerechos {
-  font-size: 10px;
-  color: rgb(0, 149, 214);
-  font-family: "Ranchers", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 149, 214, 0.9);
-  padding-bottom: 1%;
-} */
 
 /*--------------------ESTILOS DEL FORMULARIO--------------------*/
 
@@ -217,45 +191,53 @@ h3 {
   display: flex;
   align-items: end;
 }
+
 .formulario {
   width: 50%;
   margin: 0 auto;
-  background-color: #cecfc8;
+  background-color: rgb(64, 64, 64);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(90, 1, 0, );
 }
+
 .formulario label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
+
 .inp {
   width: 100%;
   margin-bottom: 15px;
   padding: 8px 15px;
   border-radius: 10px;
-  border: 1px solid #2848d6;
 }
+
 .btnForm {
   width: 100%;
   padding: 8px 15px;
   border-radius: 10px;
-  background-color: #2848d6;
+  background-color: rgb(90, 1, 0);
   border: 0;
-  color: #fff;
+  color: white;
   font-size: 18px;
 }
+
 .btnForm:hover {
-  background-color: #2bb81e;
-  border: 1px solid #2bb81e;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
 }
+
 .horario {
   margin: auto;
 }
+
 .legalesContenedor {
   height: 100vh;
 }
+
 .terminosContenedor {
   height: 100vl;
   padding-bottom: 50px;
@@ -266,27 +248,34 @@ h3 {
 .carritoContainer {
   height: 100vh;
 }
+
 h2 {
   font-family: "Revalia", sans-serif;
 }
+
 table {
   width: 100%;
 }
+
 th {
   color: black;
 }
+
 td {
   color: black;
 }
+
 .contenedor-pagar {
   position: sticky;
 }
+
 .tarjeta img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
 }
+
 .tarjeta-product {
   margin: 5px;
   border: 2px solid #ddd;
@@ -298,16 +287,19 @@ td {
   flex-direction: column;
   align-items: center;
 }
+
 .tarjeta-product .contenido-texto {
   width: 100%;
   text-align: start;
 }
+
 .cantidad {
   border: 1px solid black;
   border-radius: 5px;
   width: 20%;
   text-align: center;
 }
+
 .sectionContent {
   padding: 1rem;
   color: #ffffff;
@@ -319,15 +311,14 @@ td {
 }
 
 /*--------------------ESTILOS DE LA GALERIA--------------------*/
-/* .gallery {
-  background: linear-gradient(to right, #374151, #9F7AEA);
-} */
+
 .contenedor-galeria {
   padding: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .img-galeria {
   width: 15%;
   display: block;
@@ -335,6 +326,7 @@ td {
   box-shadow: 0 0 6px rgba(0, 0, 0, .5);
   cursor: pointer;
 }
+
 .imagen-light {
   display: none;
   position: fixed;
@@ -347,11 +339,13 @@ td {
   align-items: center;
   z-index: 1000;
 }
+
 .imagen-light img.agregar-imagen {
   max-width: 90%;
   max-height: 80%;
   border-radius: 10px;
 }
+
 .imagen-light img.close {
   position: absolute;
   top: 50px;
@@ -360,6 +354,7 @@ td {
   width: 30px;
   filter: invert(0);
 }
+
 .active {
   display: flex;
 }
@@ -370,6 +365,7 @@ td {
   .header-content h1 {
     font-size: 70px;
   }
+
   .logo {
     font-size: 25px;
     margin-left: 20px;
@@ -382,50 +378,62 @@ td {
   .header-content h1 {
     font-size: 50px;
   }
+
   .nav {
     padding-bottom: 40px;
   }
+
   .logo {
     font-size: 20px;
     margin-left: 20px;
     margin-top: 5px;
   }
+
   .iconos {
     flex-direction: column;
     align-items: flex-end;
   }
+
   #imgCarrito,
   #imgCuenta {
     padding: 15px;
     margin-left: 5px;
   }
+
   .nav li ul {
     min-width: 100px;
   }
+
   .links {
     flex-direction: column;
   }
+
   .link {
     margin-bottom: 5px;
     display: grid;
   }
+
   .link h3 {
     font-size: 18px;
     text-align: left;
     margin-left: 10px;
   }
+
   .link p {
     font-size: 14px;
     margin-bottom: 5px;
   }
+
   .link ul li a {
     font-size: 14px;
     margin-bottom: 5px;
     padding-left: 5px;
   }
+
   .img-galeria {
     width: 40%;
   }
+
   .carritoContainer {
     margin-bottom: 120%;
 
@@ -437,17 +445,21 @@ td {
   .header {
     height: auto;
   }
+
   .header-content h1 {
     font-size: 40px;
   }
+
   .iconos {
     display: block;
   }
+
   .btn,
   .btnAgregar,
   .btnDetalle {
     width: 100%;
   }
+
   .formulario {
     width: 90%;
   }
