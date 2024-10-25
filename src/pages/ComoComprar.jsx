@@ -4,7 +4,7 @@ import React from 'react';
 const Paso = ({ paso, titulo, descripcion, imagen, altText }) => {
   return (
     <div className="mb-12">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">{paso}: {titulo}</h2>
+      <h3 className="text-left text-2xl font-bold text-gray-800 mb-4">{paso}: {titulo}</h3>
       <p className="text-gray-600 mb-4">{descripcion}</p>
       <img className="border border-gray-300 rounded-lg shadow-lg max-w-full h-auto" src={imagen} alt={altText} />
     </div>
@@ -15,7 +15,7 @@ const Paso = ({ paso, titulo, descripcion, imagen, altText }) => {
 const ComoComprar = () => {
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">Cómo Comprar en </h2>
+      <h3 className="text-4xl font-bold text-gray-800 mb-4 mt-16 text-center">Cómo Comprar en Wine Store</h3>
       <p className="text-center text-gray-600 mb-12">Te explicamos paso a paso cómo hacer tu compra de manera fácil y segura.</p>
 
       {/* Paso 1 */}
@@ -83,7 +83,7 @@ const ComoComprar = () => {
 
       {/* Sección de dudas y preguntas */}
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Tienes dudas?</h2>
+        <h3 className="text-2xl font-bold text-gray-800 mb-4">Tienes dudas?</h3>
         <p className="text-gray-600">Consulta nuestra <a href="http://localhost:5173/ayuda" className="text-blue-500 hover:underline">sección de preguntas frecuentes</a> o comunícate con nuestro equipo de atención al cliente.</p>
       </div>
     </div>

@@ -235,11 +235,12 @@ h3 {
 }
 
 .legalesContenedor {
-  height: 100vh;
+  height: 100%;
+  padding-bottom: 50px;
 }
 
 .terminosContenedor {
-  height: 100vl;
+  height: 100%;
   padding-bottom: 50px;
 }
 

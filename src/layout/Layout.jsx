@@ -106,6 +106,8 @@ const Layout = () => {
                 </nav>
             </header>
             
+            {/* <div class="w-full h-px bg-gray-900 my-16"></div> */}
+            
             <main className="flex-grow">
                 <Outlet />
             </main>

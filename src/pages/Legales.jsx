@@ -8,10 +8,10 @@ function Legales() {
           <a href="http://localhost:5173">Inicio</a>
         </div> */}
 
-        <h1 className="ml-16 mt-10 font-bold">LEGALES</h1>
+        <h3 className="text-left ml-16 mt-8 font-bold text-xl">LEGALES</h3>
 
         <div className="mr-20">
-          <p className="ml-16 mt-10 text-xs">"Este sitio web está destinado exclusivamente para fines educativos y de información. La información proporcionada aquí se presenta de buena fe y se actualiza periódicamente; sin embargo, no garantizamos ni asumimos responsabilidad alguna por la exactitud, integridad o actualidad de cualquier información publicada en este sitio. El uso que usted haga de la información contenida en este sitio web queda bajo su propio riesgo.<br />
+          <p className="ml-16 mt-10 text-sm">"Este sitio web está destinado exclusivamente para fines educativos y de información. La información proporcionada aquí se presenta de buena fe y se actualiza periódicamente; sin embargo, no garantizamos ni asumimos responsabilidad alguna por la exactitud, integridad o actualidad de cualquier información publicada en este sitio. El uso que usted haga de la información contenida en este sitio web queda bajo su propio riesgo.<br />
 
             <br />Nos esforzamos por mantener la precisión y la relevancia de los contenidos educativos ofrecidos, pero recomendamos encarecidamente que verifique cualquier información crítica antes de tomar decisiones basadas en la misma. Cualquier decisión que tome basada en la información de este sitio web es responsabilidad suya.<br />
 

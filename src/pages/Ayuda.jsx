@@ -3,10 +3,10 @@ function Ayuda() {
     <div className="terminosContenedor">
 
 
-      <h2 className="ml-16 mt-10 font-bold text-4xl text-center">CENTRO DE AYUDA</h2>
+      <h3 className="ml-16 mt-16 font-bold text-2xl text-center">CENTRO DE AYUDA</h3>
 
       <div className="mr-20">
-        <h2 className="ml-16 mt-8 font-bold text-2xl">Preguntas Frecuentes</h2>
+        <h3 className="text-left ml-16 mt-8 font-bold text-xl">Preguntas Frecuentes</h3>
         <p className="ml-16 mt-5 text-base">
           <strong>¿Cómo realizar un pedido?</strong><br />
           Para realizar un pedido, navega por nuestro catálogo, selecciona los productos que deseas y agrégales a tu carrito. Luego, dirígete al carrito y sigue las instrucciones para completar tu compra.
@@ -22,11 +22,11 @@ function Ayuda() {
       </div>
 
       <div className="mr-20 mt-10">
-        <h2 className="ml-16 font-bold text-2xl">Contacto</h2>
-        <p className="ml-16 mt-5 text-base">
-          Si necesitas más ayuda, no dudes en ponerte en contacto con nuestro equipo de soporte. Estamos aquí para ayudarte.
-          <br /><br />
-         
+        <h3 className="text-left ml-16 font-bold text-xl">Contacto</h3>
+        
+        <p className="ml-16 mt-1  text-base">
+          Si necesitas más ayuda, no dudes en ponerte en contacto con nuestro equipo de soporte. Estamos aquí para ayudarte.< br/>< br/>
+          
           <li>
             <strong>Correo electrónico: </strong>
             <a
@@ -54,8 +54,8 @@ function Ayuda() {
       </div>
 
       <div className="mr-20 mt-10">
-        <h2 className="ml-16 font-bold text-2xl">Recursos Adicionales</h2>
-        <ul className="ml-16 mt-5 text-base list-disc">
+        <h3 className="text-left ml-16 font-bold text-xl">Recursos Adicionales</h3>
+        <ul className="ml-16 mt-1 text-base list-disc">
           <li><a className="text-blue-500 hover:underline" href="http://localhost:5173/comocomprar">Guía de Compra</a></li>
           <li><a className="text-blue-500 hover:underline" href="http://localhost:5173/contacto">Contacto</a></li>
           <li><a className="text-blue-500 hover:underline" href="http://localhost:5173/terminoCondiciones">Términos y Condiciones</a></li>

@@ -20,7 +20,7 @@ function Home() {
     return (
         <header className="bg-slate-50 shadow-lg p-4">
             <div>
-                <div className="mt-20">
+                <div className="mt-16">
                     <Banner />
                 </div>
                 <section className="">
