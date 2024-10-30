@@ -31,6 +31,7 @@ function InicioSesion() {
         clave,
       });
 
+      // if (email=== "josepolvoraoviedo@gmail.com" && clave ==="1234"){
       if (response.data.ok) {
         Swal.fire('Éxito', 'Inicio de sesión exitoso', 'success');
         window.location.href = 'http://localhost:5173/header';

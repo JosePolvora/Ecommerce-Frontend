@@ -13,9 +13,7 @@ function PiePagina() {
                             <a href="https://facebook.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-facebook'></i>
                             </a>
-                            {/* <a href="https://twitter.com" target="_blank" className="social-media-icon-fi">
-                                <i className='bx bxl-twitter' ></i>
-                            </a> */}
+
                             {/* <a href="https://x.com/" target="_blank" className="social-media-icon">
 
                                 <img
@@ -25,6 +23,7 @@ function PiePagina() {
                                 />
 
                             </a> */}
+                            
                             <a href="https://instagram.com" target="_blank" className="social-media-icon-fi">
                                 <i className='bx bxl-instagram' ></i>
                             </a>

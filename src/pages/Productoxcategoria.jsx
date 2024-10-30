@@ -26,9 +26,30 @@ function Productosxcategoria() {
     }, [id]);
 
 
-    const handleAgregarAlCarrito = (item) => {
-        agregarAlCarrito(item);
+    // const handleAgregarAlCarrito = (item) => {
+    //     agregarAlCarrito(item);
 
+    //     Swal.fire({
+    //         title: '¡Producto agregado!',
+    //         text: `${item.nombre} ha sido agregado al carrito.`,
+    //         icon: 'success',
+    //         confirmButtonText: 'Aceptar',
+    //         timer: 2000,
+    //     });
+    // };
+
+    const handleAgregarAlCarrito = (item) => {
+        if (!item?.disponible) {
+            Swal.fire({
+                title: 'El producto no está disponible.',
+                icon: 'error',
+                confirmButtonText: 'Aceptar',
+                timer: 2000,
+            });
+            return;
+        }
+
+        agregarAlCarrito(item);
         Swal.fire({
             title: '¡Producto agregado!',
             text: `${item.nombre} ha sido agregado al carrito.`,
@@ -37,8 +58,6 @@ function Productosxcategoria() {
             timer: 2000,
         });
     };
-
-
 
 
     const handleVerDetalles = (productoxcategoria_id) => {
@@ -75,6 +94,17 @@ function Productosxcategoria() {
                                     <span className="font-bold">Descripción: </span>
                                     {item.producto.descripcion}
                                 </div>
+
+                                <div className='pt-10'>
+                                {item?.producto.disponible === true ?
+                                    <div></div>
+                                    :
+                                    <div className=' text-red-900 font-bold italic text-center text-xl '>
+                                        No Disponible
+                                    </div>
+                                }
+                            </div>
+
                             </div>
                             <div className='flex'>
 
@@ -99,8 +129,6 @@ function Productosxcategoria() {
                                         </button>
                                     </div>
                                 </div>
-
-
 
                             </div>
                         </div>

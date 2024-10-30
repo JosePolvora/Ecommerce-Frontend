@@ -41,12 +41,10 @@ const DetalleProducto = () => {
     //     });
     // };
 
-
     const handleAgregarAlCarrito = () => {
         if (!producto?.disponible) {
             Swal.fire({
                 title: 'El producto no está disponible.',
-                // text: 'El producto no está disponible.',
                 icon: 'error',
                 confirmButtonText: 'Aceptar',
                 timer: 2000,
@@ -63,8 +61,6 @@ const DetalleProducto = () => {
             timer: 2000,
         });
     };
-
-
 
     const handleImagenClick = (imagen) => {
         setImagenPrincipal(imagen);
@@ -96,21 +92,23 @@ const DetalleProducto = () => {
                         </div>
 
                         {/* Miniaturas con efecto de selección */}
-                        <div className="flex mt-4 space-x-2">
+                        {/* <div className="block -mt-72"> */}
+
+                        <div className="flex mt-6 space-x-2">
                             <img
-                                className="w-24 h-40 cursor-pointer border-2 border-transparent hover:border-gray-400 transition-all duration-200"
+                                className="w-24 h-36 cursor-pointer border-2 border-transparent hover:border-gray-400 p-1 transition-all duration-200"
                                 src={producto?.imagenUno}
                                 alt={producto?.nombre}
                                 onClick={() => handleImagenClick(producto?.imagenUno)}
                             />
                             <img
-                                className="w-24 h-40 cursor-pointer border-2 border-transparent hover:border-gray-400 transition-all duration-200"
+                                className="w-24 h-36 cursor-pointer border-2 border-transparent hover:border-gray-400 p-1 transition-all duration-200"
                                 src={producto?.imagenDos}
                                 alt={producto?.nombre}
                                 onClick={() => handleImagenClick(producto?.imagenDos)}
                             />
                             <img
-                                className="w-24 h-40 cursor-pointer border-2 border-transparent hover:border-gray-400 transition-all duration-200"
+                                className="w-24 h-36 cursor-pointer border-2 border-transparent hover:border-gray-400 p-1 transition-all duration-200"
                                 src={producto?.imagenTres}
                                 alt={producto?.nombre}
                                 onClick={() => handleImagenClick(producto?.imagenTres)}
