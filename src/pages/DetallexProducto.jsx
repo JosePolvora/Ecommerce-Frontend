@@ -137,13 +137,17 @@ const DetalleProducto = () => {
                             </button>
                         </div>
 
-                        <div className='pt-10'>
+                        <div className='pt-8 flex justify-center'>
                             {producto?.disponible === true ?
                                 <div></div>
                                 :
-                                <div className=' text-red-900 font-bold italic text-center p-2 text-xl'>
-                                    Stock No Disponible
+                                <div className=' text-white bg-red-500 text-center text-base p-1 w-3/4'>
+                                    <i className='bx bx-block'></i> Consultar stock
                                 </div>
+
+                                // <div className=' text-red-900 font-bold italic text-center p-2 text-xl'>
+                                //     Stock No Disponible
+                                // </div>
                             }
                         </div>
                     </div>

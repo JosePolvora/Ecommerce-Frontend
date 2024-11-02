@@ -95,13 +95,16 @@ function Productosxcategoria() {
                                     {item.producto.descripcion}
                                 </div>
 
-                                <div className='pt-10'>
+                                <div className='pt-3'>
                                 {item?.producto.disponible === true ?
                                     <div></div>
                                     :
-                                    <div className=' text-red-900 font-bold italic text-center text-xl '>
-                                        No Disponible
+                                    <div className=' text-white bg-red-500 text-center text-base p-1 w-48'>
+                                        <i className='bx bx-block'></i> Consultar stock
                                     </div>
+                                    // <div className=' text-red-900 font-bold italic text-center text-xl '>
+                                    //     No Disponible
+                                    // </div>
                                 }
                             </div>
 

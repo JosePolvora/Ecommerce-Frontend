@@ -15,10 +15,9 @@ function Carrito() {
 
     return (
         <div className="carritoContainer">
+            <h3 className="text-center pt-20 text-3xl  font-bold">Carrito de Compras</h3>
             <div className="flex flex-wrap p-4 lg:h-auto h-auto">
-
-                <h2 className="text-center pt-10 text-3xl w-full">Carrito de Compras</h2>
-
+                
                 <div className="w-full  lg:w-3/5 mt-10 ml-5 p-5">
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {carrito.map((item, i) => (
@@ -73,7 +72,7 @@ function Carrito() {
 
                         <div id="total-carrito" className="text-center p-1">
 
-                            <h2 className="text-2xl font-bold mb-4 pb-4 pt-2">Total: <span className='text-gray-900 text-xl'>${total.toFixed(2)}</span></h2>
+                            <h3 className="text-2xl font-bold mb-4 pb-4 pt-2">Total<span className='text-gray-900 text-2xl font-bold'><span className='text-xl italic pl-4'>${total.toFixed(2)}</span></span></h3>
 
                             <div className='pb-2'>
                                 <button className="w-3/4 bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition mb-4">
@@ -87,8 +86,8 @@ function Carrito() {
                             </div>
                         </div>
 
-                        <a href="http://localhost:5173/productos" className="text-blue-500 hover:text-blue-700 mt-4 block text-center">
-                            ⬅ Continuar comprando
+                        <a href="http://localhost:5173/productos" className="text-red-950 hover:text-red-600 mt-4 block text-center">
+                            Continuar comprando
                         </a>
                     </div>
 

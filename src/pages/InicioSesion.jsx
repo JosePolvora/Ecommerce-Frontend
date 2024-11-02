@@ -21,17 +21,15 @@ function InicioSesion() {
     });
 
     if (!confirmation.isConfirmed) {
-      // User canceled
       return;
     }
 
     try {
-      const response = await axios.get('http://localhost:3000/api/usuarios', {
+      const response = await axios.post('http://localhost:3000/api/usuarios/login', {
         email,
         clave,
       });
 
-      // if (email=== "josepolvoraoviedo@gmail.com" && clave ==="1234"){
       if (response.data.ok) {
         Swal.fire('Éxito', 'Inicio de sesión exitoso', 'success');
         window.location.href = 'http://localhost:5173/header';

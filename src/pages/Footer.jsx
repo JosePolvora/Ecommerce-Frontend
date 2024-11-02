@@ -92,7 +92,7 @@ function PiePagina() {
                         </ul>
                     </div>
                 </div>
-                <hr />
+                {/* <hr /> */}
 
                 {/* <div className="text-center bg-gradient-to-r from-slate-700 to-purple-500 shadow-lg p-4"> */}
                 <div className="text-center bg-black shadow-lg p-4">
