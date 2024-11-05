@@ -136,7 +136,7 @@ function FormUsuarios() {
                                 checked={activo}
                                 onChange={(e) => setActivo(e.target.checked)}
                             />
-                            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="activo">
+                            <label className="block mb-2 text-sm font-bold text-white" htmlFor="activo">
                                 Activo:
                             </label>
                         </div>

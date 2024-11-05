@@ -125,7 +125,7 @@ function Home() {
                                 alt="Aceites"
                                 className="p-5 w-full h-full object-cover rounded-lg bg-gradient-to-r from-slate-500 to-red-900 cursor-pointer"
                                 onClick={() => {
-                                    navigate('/productos/categoria/6');
+                                    navigate('/productos/categoria/9');
                                 }}
                             />
                             <div className="absolute bottom-0 w-full text-center bg-black bg-opacity-50 text-white p-1 rounded-b-lg">

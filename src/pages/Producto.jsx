@@ -108,7 +108,7 @@ const Producto = () => {
                                     <div></div>
                                     :
                                     // <div className=' text-red-900 font-bold italic text-center text-xl'>
-                                    <div className=' text-white bg-red-500 mt-3 text-center text-base p-1 w-48'>
+                                    <div className=" text-white bg-red-500 mt-3 text-center text-base p-1 w-48">
                                         <i className='bx bx-block'></i> Consultar stock
                                     </div>
                                 }

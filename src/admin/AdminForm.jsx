@@ -223,7 +223,7 @@ function FormProductos() {
                                 checked={disponible}
                                 onChange={(e) => setDisponible(e.target.checked)}
                             />
-                            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="disponible">
+                            <label className="block mb-2 text-sm font-bold text-white" htmlFor="disponible">
                                 Disponible:
                             </label>
                         </div>

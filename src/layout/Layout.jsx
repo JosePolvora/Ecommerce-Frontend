@@ -13,7 +13,7 @@ const Layout = () => {
         espumantes: 3,
         espirituosas: 5,
         cafes: 2,
-        aceites: 6,
+        aceites: 9,
         chocolates: 4,
     };
 
@@ -35,13 +35,12 @@ const Layout = () => {
 
     return (
         <div>
-            {/* <header className="bg-gradient-to-r from-slate-700 to-purple-500 shadow-lg p-4"> */}
+
             <header className="bg-black shadow-lg p-4">
 
                 <div className="flex justify-between items-center ">
                     <div className="logo">
                         <p>Wine Store</p>
-                        {/* <p className='text-sm font-sans text-center'>Tienda de Vinos</p> */}
                         <p className="text-xs md:text-sm lg:text-base font-sans text-center md:text-left lg:text-right">
                             Tienda de Vinos
                         </p>
@@ -63,9 +62,6 @@ const Layout = () => {
                         </button>
                     </form>
 
-                    
-
-
                     <div className="flex mr-4">
                         <a href="http://localhost:5173/inicioSesion">
                             <img src="" id="imgCuenta" />
@@ -77,7 +73,6 @@ const Layout = () => {
                     </div>
                 </div>
 
-                {/* <hr /> */}
                 <nav className="nav">
                     <ul className='text-white  flex justify-center gap-2 sm:gap-4 md:gap-5 mt-4 sm:mt-6 md:mt-8'>
                         <li><Link className='text-xs md:text-base lg:text-base' to="/header">Inicio</Link></li>
@@ -92,11 +87,10 @@ const Layout = () => {
                             </ul>
                         </li>
                         <li>
-                            {/* <Link className='text-xs md:text-base lg:text-base' to="/header#Delicatessen">Delicatessen</Link> */}
                             <a className="galery" href="/header#Delicatessen"><span className="text-xs md:text-base lg:text-base">Delicatessen</span></a>
                             <ul className='text-black'>
                                 <li className="my-0 mx-3 text-xs md:text-sm lg:text-sm mt-5"><Link to="/productos/categoria/2">Cafes</Link></li>
-                                <li className="mx-3 text-xs md:text-sm lg:text-sm"><Link to="/productos/categoria/6">Aceites</Link></li>
+                                <li className="mx-3 text-xs md:text-sm lg:text-sm"><Link to="/productos/categoria/9">Aceites</Link></li>
                                 <li className="my-0 mx-3 text-xs md:text-sm lg:text-sm"><Link to="/productos/categoria/4">Chocolates</Link></li>
                             </ul>
                         </li>
@@ -105,9 +99,7 @@ const Layout = () => {
                     </ul>
                 </nav>
             </header>
-            
-            {/* <div class="w-full h-px bg-gray-900 my-16"></div> */}
-            
+
             <main className="flex-grow">
                 <Outlet />
             </main>

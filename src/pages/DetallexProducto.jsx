@@ -92,7 +92,6 @@ const DetalleProducto = () => {
                         </div>
 
                         {/* Miniaturas con efecto de selección */}
-                        {/* <div className="block -mt-72"> */}
 
                         <div className="flex mt-6 space-x-2">
                             <img
@@ -141,13 +140,9 @@ const DetalleProducto = () => {
                             {producto?.disponible === true ?
                                 <div></div>
                                 :
-                                <div className=' text-white bg-red-500 text-center text-base p-1 w-3/4'>
+                                <a href="http://localhost:5173/contacto" className=' text-white bg-red-500 text-center text-base p-1 w-3/4'>
                                     <i className='bx bx-block'></i> Consultar stock
-                                </div>
-
-                                // <div className=' text-red-900 font-bold italic text-center p-2 text-xl'>
-                                //     Stock No Disponible
-                                // </div>
+                                </a>
                             }
                         </div>
                     </div>
@@ -156,7 +151,7 @@ const DetalleProducto = () => {
 
             {/* Lightbox Modal */}
             {isLightboxOpen && (
-                // <div className="fixed inset-14 bg-black bg-opacity-95 z-50 flex items-center justify-center mr-56 ml-56" onClick={closeLightbox}>
+                
                 <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center" onClick={closeLightbox}>
                     <div className="relative">
                         <img className="max-w-full max-h-screen" src={imagenPrincipal} alt="Producto ampliado" />

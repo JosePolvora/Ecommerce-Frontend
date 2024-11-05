@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 
 function AdminCategorias() {
     const [loading, setLoading] = useState(true);
@@ -29,14 +29,43 @@ function AdminCategorias() {
     }, []);
 
     const borrarCategoria = async (categoria_id) => {
-        if (window.confirm("¿Desea borrar la categoria?")) {
-            try {
-                await axios.delete(`http://localhost:3000/api/categorias/${categoria_id}`);
-                cargarCategorias();
-            } catch (error) {
-                console.error("Error al borrar la categoria", error);
+        // if (window.confirm("¿Desea borrar la categoria?")) {
+        //     try {
+        //         await axios.delete(`http://localhost:3000/api/categorias/${categoria_id}`);
+        //         cargarCategorias();
+        //     } catch (error) {
+        //         console.error("Error al borrar la categoria", error);
+        //     }
+        // }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "No podrás revertir esto",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, borrar',
+            cancelButtonText: 'Cancelar'
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    await axios.delete(`http://localhost:3000/api/categorias/${categoria_id}`);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Categoria eliminada',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    cargarCategorias();
+                } catch (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error al eliminar la categoria',
+                        text: error.response?.data?.message || 'Error desconocido',
+                    });
+                }
             }
-        }
+        });
     };
 
 
@@ -102,7 +131,7 @@ function AdminCategorias() {
                                         </button>
                                         <button
                                             className='w-24 p-1 ml-3 text-white bg-red-500 rounded-md hover:bg-red-800 mb-4'
-                                            onClick={() => borrarProducto(categoria.categoria_id)}
+                                            onClick={() => borrarCategoria(categoria.categoria_id)}
                                         >
                                             BORRAR
                                         </button>
