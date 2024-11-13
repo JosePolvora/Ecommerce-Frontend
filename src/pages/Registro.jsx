@@ -14,7 +14,7 @@ function Registro() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/usuarios', {
+      const response = await axios.post('http://localhost:3000/api/register', {
         nombre,
         apellido,
         email,

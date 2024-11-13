@@ -24,15 +24,45 @@ function InicioSesion() {
       return;
     }
 
+    // try {
+    //   const response = await axios.post('http://localhost:3000/api/login', {
+    //     email,
+    //     clave,
+    //   });
+
+    //   if (response.data.ok) {
+    //     Swal.fire('Éxito', 'Inicio de sesión exitoso', 'success');
+    //     window.location.href = 'http://localhost:5173/header';
+    //   } else {
+    //     Swal.fire('Error', 'Credenciales incorrectas', 'error');
+    //   }
+    // } catch (error) {
+    //   console.error('Error al iniciar sesión:', error);
+    //   Swal.fire('Error', 'Error en el servidor', 'error');
+    // }
+
     try {
-      const response = await axios.post('http://localhost:3000/api/usuarios/login', {
+      const response = await axios.post('http://localhost:3000/api/login', {
         email,
         clave,
       });
 
       if (response.data.ok) {
         Swal.fire('Éxito', 'Inicio de sesión exitoso', 'success');
-        window.location.href = 'http://localhost:5173/header';
+
+        // Verificamos el rol del usuario desde la respuesta del servidor
+        const rol = response.data.usuario.rol;
+
+        if (rol === 'Usuario') {
+          // Redirigir a la página de usuario
+          window.location.href = 'http://localhost:5173/header';
+        } else if (rol === 'Administrador') {
+          // Redirigir a la página del administrador
+          window.location.href = 'http://localhost:5173/admin/admindashboard';
+        } else {
+          // Si el rol no es válido, mostramos un mensaje de error
+          Swal.fire('Error', 'Rol no autorizado', 'error');
+        }
       } else {
         Swal.fire('Error', 'Credenciales incorrectas', 'error');
       }
@@ -40,6 +70,7 @@ function InicioSesion() {
       console.error('Error al iniciar sesión:', error);
       Swal.fire('Error', 'Error en el servidor', 'error');
     }
+
   };
 
   return (

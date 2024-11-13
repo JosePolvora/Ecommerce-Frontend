@@ -23,12 +23,11 @@ function AdminDashboard() {
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminproductos">Editar Productos</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1" ><a href="http://localhost:5173/admin/adminusuarios">Editar Usuarios</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="#">Mensajes Recibidos</a></li>
-                    {/* <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminimagenes">Editar Imagenes</a></li> */}
-
+                
                   </ul>
                 </li>
                 <li>
-                  <a href="http://localhost:5173" className="hover:text-gray-400 text-2xl">
+                  <a href="http://localhost:5173/header" className="hover:text-gray-400 text-2xl">
                     Inicio
                   </a>
                 </li>
@@ -52,7 +51,7 @@ function AdminDashboard() {
         <div className="container mx-auto mt-8 space-y-6">
           <section>
             <h2 className="text-2xl font-semibold mb-4">Pedidos recientes</h2>
-            {/* Aquí puedes agregar una tabla o listado de pedidos */}
+            {/* Aquí se puede agregar una tabla o listado de pedidos */}
             <div className="bg-gray-700 p-4 rounded-lg shadow-md">
               <p className='text-white'>Tabla de pedidos</p>
             </div>
@@ -61,7 +60,7 @@ function AdminDashboard() {
         <div className='container mx-auto mt-8 space-y-6'>
           <section>
             <h2 className="text-2xl font-semibold mb-4">Productos populares</h2>
-            {/* Aquí puedes agregar una lista de productos más vendidos */}
+            {/* Aquí se puede agregar una lista de productos más vendidos */}
             <div className="bg-gray-700 p-4 rounded-lg shadow-md">
               <p className='text-white'>Lista de productos populares</p>
             </div>
