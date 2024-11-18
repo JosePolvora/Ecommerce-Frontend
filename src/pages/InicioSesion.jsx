@@ -53,7 +53,7 @@ function InicioSesion() {
         // Verificamos el rol del usuario desde la respuesta del servidor
         const rol = response.data.usuario.rol;
 
-        if (rol === 'Usuario') {
+        if (rol === 'Usuario' || rol === '') {
           // Redirigir a la página de usuario
           window.location.href = 'http://localhost:5173/header';
         } else if (rol === 'Administrador') {

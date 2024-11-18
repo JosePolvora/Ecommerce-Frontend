@@ -40,6 +40,12 @@ const Layoutadmin = () => {
                     <li>
                         <Link to="/admin/adminimagenes"></Link>
                     </li>
+                    <li>
+                        <Link to="/admin/admincupones"></Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/formcupones"></Link>
+                    </li>
 
 
                 </ul>
