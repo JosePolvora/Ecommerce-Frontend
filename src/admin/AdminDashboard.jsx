@@ -22,9 +22,9 @@ function AdminDashboard() {
                     <li className="hover:text-gray-400 ml-2 pt-1" ><a href="http://localhost:5173/admin/admincupones">Editar Cupones</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminenvios">Editar Envios</a></li>
                     <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminproductos">Editar Productos</a></li>
-                    <li className="hover:text-gray-400 ml-2 pt-1" ><a href="http://localhost:5173/admin/adminusuarios">Editar Usuarios</a></li>
-                    
-                    <li className="hover:text-gray-400 ml-2 pt-1"><a href="#">Mensajes Recibidos</a></li>
+                    <li className="hover:text-gray-400 ml-2 pt-1" ><a href="http://localhost:5173/admin/adminusuarios">Editar Usuarios</a></li>                    
+                    <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/adminmensajes">Mensajes Recibidos</a></li>
+                    <li className="hover:text-gray-400 ml-2 pt-1"><a href="http://localhost:5173/admin/admincomentarios">Comentarios Recibidos</a></li>
                 
                   </ul>
                 </li>

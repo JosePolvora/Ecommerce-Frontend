@@ -32,6 +32,9 @@ import AdminFormEnvio from "./admin/AdminFormEnvio";
 import AdminImagenes from "./admin/AdminImagenes"
 import AdminCupones from "./admin/AdminCupones"
 import AdminFormCupones from "./admin/AdminFormCupones"
+import AdminMensajes from "./admin/AdminMensajes"
+import AdminComentarios from "./admin/AdminComentarios"
+
 
 function App() {
   return (
@@ -90,6 +93,9 @@ function App() {
           <Route path="admin/admincupones" element={<AdminCupones />} />
           <Route path="admin/formcupones" element={<AdminFormCupones />} />
           <Route path="admin/formcupones/:cupones_id" element={<AdminFormCupones />} />
+
+          <Route path="admin/adminmensajes" element={<AdminMensajes />} />
+          <Route path="admin/admincomentarios" element={<AdminComentarios />} />
 
         </Route>
 

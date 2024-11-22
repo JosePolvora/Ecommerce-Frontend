@@ -13,6 +13,8 @@ function FormProductos() {
     const [imagenDos, setImagenDos] = useState('');
     const [imagenTres, setImagenTres] = useState('');
     const [disponible, setDisponible] = useState(false);
+    const [caracteristicas, setCaracteristicas] = useState(''); // Nueva propiedad para características
+    const [especificaciones, setEspecificaciones] = useState(''); // Nueva propiedad para especificaciones
 
     const [categorias, setCategorias] = useState([]);
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
@@ -44,6 +46,8 @@ function FormProductos() {
                         setImagenUno(producto.imagenUno);
                         setImagenDos(producto.imagenDos);
                         setImagenTres(producto.imagenTres);
+                        setCaracteristicas(producto.caracteristicas);
+                        setEspecificaciones(producto.especificaciones);
                         setCategoriaSeleccionada(producto.categoria);
                     } else {
                         console.error("Error en la respuesta del servidor");
@@ -69,6 +73,8 @@ function FormProductos() {
                 imagenUno,
                 imagenDos,
                 imagenTres,
+                caracteristicas,
+                especificaciones,
                 categoria: categoriaSeleccionada,
             });
 
@@ -106,6 +112,8 @@ function FormProductos() {
                 imagenUno,
                 imagenDos,
                 imagenTres,
+                caracteristicas,
+                especificaciones,
                 categoria: categoriaSeleccionada,
             });
 
@@ -166,6 +174,24 @@ function FormProductos() {
                             required
                         />
 
+                        <textarea
+                            type="text"
+                            placeholder="Características"
+                            className="inp"
+                            value={caracteristicas}
+                            onChange={(e) => setCaracteristicas(e.target.value)}
+                            required
+                        />
+
+                        <textarea
+                            type="text"
+                            placeholder="Especificaciones"
+                            className="inp"
+                            value={especificaciones}
+                            onChange={(e) => setEspecificaciones(e.target.value)}
+                            required
+                        />
+
                         <input
                             type="text"
                             placeholder="Imagen"
@@ -215,6 +241,7 @@ function FormProductos() {
                                 </option>
                             ))}
                         </select>
+
                         <div className="flex mb-4">
                             <input
                                 type="checkbox"
@@ -227,6 +254,7 @@ function FormProductos() {
                                 Disponible:
                             </label>
                         </div>
+
                         <input className="btnForm" type="submit" value={producto_id ? "Actualizar" : "Agregar"} />
                     </form>
                 </div>

@@ -29,14 +29,6 @@ function AdminCategorias() {
     }, []);
 
     const borrarCategoria = async (categoria_id) => {
-        // if (window.confirm("¿Desea borrar la categoria?")) {
-        //     try {
-        //         await axios.delete(`http://localhost:3000/api/categorias/${categoria_id}`);
-        //         cargarCategorias();
-        //     } catch (error) {
-        //         console.error("Error al borrar la categoria", error);
-        //     }
-        // }
         Swal.fire({
             title: '¿Estás seguro?',
             text: "No podrás revertir esto",
@@ -94,7 +86,7 @@ function AdminCategorias() {
                 >
                     AGREGAR
                 </button>
-               
+
             </div>
 
 
@@ -107,7 +99,7 @@ function AdminCategorias() {
                             <tr>
                                 <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Id</th>
                                 <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-                                {/* <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Precio</th> */}
+
                                 <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
                                 <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
                                 <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
@@ -118,10 +110,9 @@ function AdminCategorias() {
                                 <tr className="hover:bg-gray-100" key={categoria.categoria_id}>
                                     <td className="px-6 py-4 whitespace-nowrap">{categoria.categoria_id}</td>
                                     <td className="px-6 py-4 whitespace-nowrap">{categoria.nombre}</td>
-                                    {/* <td className="px-6 py-4 whitespace-nowrap">{categoria.precio}</td> */}
+
                                     <td className="px-6 py-4 whitespace-nowrap">{categoria.descripcion}</td>
                                     <td className="px-6 py-4 whitespace-nowrap">{categoria.estado}</td>
-                                    {/* <td className="px-6 py-4 whitespace-nowrap">{categoria.disponible ? <span className='text-green-500'>SI</span> : <span className='text-red-500'>NO</span>}</td> */}
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <button
                                             className='w-24 p-1 text-white bg-blue-500 rounded-md hover:bg-blue-800 mb-4'

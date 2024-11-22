@@ -113,6 +113,8 @@ function Articulo() {
                                     <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
                                     <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Precio</th>
                                     <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
+                                    <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Caracteristicas</th>
+                                    <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Especificaciones</th>
                                     <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Disponible</th>
                                     <th scope="col" className="px-6 py-3 text-left text-1xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
                                 </tr>
@@ -124,6 +126,9 @@ function Articulo() {
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{producto.nombre}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{producto.precio}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{producto.descripcion}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{producto.caracteristicas}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{producto.especificaciones}</td>
+
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {producto.disponible ? <span className='text-green-500'>SI</span> : <span className='text-red-500'>NO</span>}
                                         </td>
@@ -170,3 +175,4 @@ function Articulo() {
 }
 
 export default Articulo;
+

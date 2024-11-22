@@ -46,7 +46,11 @@ const Layoutadmin = () => {
                     <li>
                         <Link to="/admin/formcupones"></Link>
                     </li>
-
+                    <li>
+                        <Link to="/admin/admincomentarios"></Link>
+                    </li>
+                    
+                    
 
                 </ul>
             </nav>

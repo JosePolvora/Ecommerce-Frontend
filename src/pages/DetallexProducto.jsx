@@ -12,6 +12,7 @@ const DetalleProducto = () => {
     const { agregarAlCarrito } = useContext(CarritoContext);
     const [imagenPrincipal, setImagenPrincipal] = useState('');
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+    const [comentario, setComentario] = useState('');
 
     useEffect(() => {
         axios.get(`http://localhost:3000/api/productos/${id}`)
@@ -29,17 +30,6 @@ const DetalleProducto = () => {
 
     if (loading) return <p className="text-center text-2xl">Cargando...</p>;
     if (error) return <p className="text-center text-2xl text-red-600">{error}</p>;
-
-    // const handleAgregarAlCarrito = () => {
-    //     agregarAlCarrito(producto);
-    //     Swal.fire({
-    //         title: '¡Producto agregado!',
-    //         text: `${producto.nombre} ha sido agregado al carrito.`,
-    //         icon: 'success',
-    //         confirmButtonText: 'Aceptar',
-    //         timer: 2000,
-    //     });
-    // };
 
     const handleAgregarAlCarrito = () => {
         if (!producto?.disponible) {
@@ -66,14 +56,32 @@ const DetalleProducto = () => {
         setImagenPrincipal(imagen);
     };
 
-    // Función para abrir el lightbox
     const openLightbox = () => {
         setIsLightboxOpen(true);
     };
 
-    // Función para cerrar el lightbox
     const closeLightbox = () => {
         setIsLightboxOpen(false);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post('http://localhost:3000/api/comentarios', {
+                comentario: comentario,
+            });
+
+            if (response.data.ok) {
+                Swal.fire('Éxito', 'Mensaje enviado exitosamente', 'success');
+                setComentario('');
+            } else {
+                Swal.fire('Error', 'Error al enviar el mensaje', 'error');
+            }
+        } catch (error) {
+            console.error('Error al enviar el mensaje:', error);
+            Swal.fire('Error', 'Error en el servidor', 'error');
+        }
     };
 
     return (
@@ -81,8 +89,6 @@ const DetalleProducto = () => {
             <div className="max-w-4xl rounded-md overflow-hidden shadow-lg bg-white p-8 mb-10 border-2 border-gray-300">
                 <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/2">
-                        {/* Imagen principal con efecto lightbox */}
-
                         <div className="cursor-pointer" onClick={openLightbox}>
                             <img
                                 className="mx-auto block w-50 h-85 transform transition-transform duration-300 hover:scale-110"
@@ -90,8 +96,6 @@ const DetalleProducto = () => {
                                 alt={producto?.nombre}
                             />
                         </div>
-
-                        {/* Miniaturas con efecto de selección */}
 
                         <div className="flex mt-6 space-x-2">
                             <img
@@ -113,7 +117,6 @@ const DetalleProducto = () => {
                                 onClick={() => handleImagenClick(producto?.imagenTres)}
                             />
                         </div>
-
                     </div>
 
                     <div className="md:w-1/2 md:ml-6 mt-4 md:mt-0">
@@ -137,27 +140,85 @@ const DetalleProducto = () => {
                         </div>
 
                         <div className='pt-8 flex justify-center'>
-                            {producto?.disponible === true ?
+                            {producto?.disponible ? (
                                 <div></div>
-                                :
-                                <a href="http://localhost:5173/contacto" className=' text-white bg-red-500 text-center text-base p-1 w-3/4'>
+                            ) : (
+                                <a href="http://localhost:5173/contacto" className='text-white bg-red-500 text-center text-base p-1 w-3/4'>
                                     <i className='bx bx-block'></i> Consultar stock
                                 </a>
-                            }
+                            )}
                         </div>
                     </div>
                 </div>
+
+
+                <div className="border border-gray-300 p-4 rounded-md mt-10">
+                    <h3 className="text-left mb-2">Características generales</h3>
+                    <table className="w-full border border-collapse table-auto">
+                        <thead>
+                            <tr>
+                                <th className="border px-4 py-2 bg-gray-200 text-left">Tipo</th>
+                                <th className="border px-4 py-2 bg-gray-200 text-left">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {producto.especificaciones && producto.especificaciones.trim() ? (
+                                producto.especificaciones.split('\n').map((item, index) => {
+                                    const [tipo, descripcion] = item.split('|');
+                                    return (
+                                        <tr key={index} className="odd:bg-white even:bg-gray-50">
+                                            <td className="border px-4 py-2">{tipo?.trim()}</td>
+                                            <td className="border px-4 py-2">{descripcion?.trim()}</td>
+                                        </tr>
+                                    );
+                                })
+                            ) : (
+                                <tr>
+                                    <td colSpan="2" className="border px-4 py-2 text-center text-gray-500">
+                                        Sin datos disponibles
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+
+                    <h3 className="text-left mb-2">Especificaciones</h3>
+                    <table className="w-full border border-collapse table-auto">
+                        <thead>
+                            <tr>
+                                <th className="border px-4 py-2 bg-gray-200 text-left">Tipo</th>
+                                <th className="border px-4 py-2 bg-gray-200 text-left">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {producto.caracteristicas && producto.caracteristicas.trim() ? (
+                                producto.caracteristicas.split('\n').map((item, index) => {
+                                    const [tipo, descripcion] = item.split('|');
+                                    return (
+                                        <tr key={index} className="odd:bg-white even:bg-gray-50">
+                                            <td className="border px-4 py-2">{tipo?.trim()}</td>
+                                            <td className="border px-4 py-2">{descripcion?.trim()}</td>
+                                        </tr>
+                                    );
+                                })
+                            ) : (
+                                <tr>
+                                    <td colSpan="2" className="border px-4 py-2 text-center text-gray-500">
+                                        Sin datos disponibles
+                                    </td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
 
-            {/* Lightbox Modal */}
             {isLightboxOpen && (
-                
                 <div className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center" onClick={closeLightbox}>
                     <div className="relative">
                         <img className="max-w-full max-h-screen" src={imagenPrincipal} alt="Producto ampliado" />
                     </div>
-
-
                     <button
                         className="absolute top-4 right-4 bg-slate-500 text-black rounded-full py-1 px-3  text-xl"
                         onClick={closeLightbox}
@@ -166,6 +227,21 @@ const DetalleProducto = () => {
                     </button>
                 </div>
             )}
+
+            <div className="ml-20">
+                <h2 className='text-center pb-5'>Envianos un comentario</h2>
+                <form onSubmit={handleSubmit}>
+                    <textarea
+                        placeholder="Comentario"
+                        className="inp"
+                        value={comentario}
+                        onChange={(e) => setComentario(e.target.value)}
+                        required
+                    />
+                    <input className="btnForm" type="submit" value="Enviar" />
+                </form>
+            </div>
+
         </div>
     );
 };
